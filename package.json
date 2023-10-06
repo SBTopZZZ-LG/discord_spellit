@@ -1,0 +1,32 @@
+{
+	"name": "spell_it",
+	"version": "1.0.0",
+	"description": "Spell it game for Discord",
+	"main": "src/app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node src/app.js",
+		"dev": "nodemon src/app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SBTopZZZ-LG/discord_spellit.git"
+	},
+	"keywords": [
+		"spell-it",
+		"spellit",
+		"spell",
+		"it",
+		"discord",
+		"bot"
+	],
+	"author": "SBTopZZZ-LG",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SBTopZZZ-LG/discord_spellit/issues"
+	},
+	"homepage": "https://github.com/SBTopZZZ-LG/discord_spellit#readme",
+	"devDependencies": {
+		"nodemon": "^3.0.1"
+	}
+}
