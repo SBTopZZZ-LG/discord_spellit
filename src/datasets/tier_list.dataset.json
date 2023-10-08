@@ -1,0 +1,12 @@
+{
+  "1000": "Novice",
+  "2500": "Apprentice",
+  "5000": "Journeyman",
+  "10000": "Adept",
+  "20000": "Expert",
+  "40000": "Master",
+  "80000": "Grandmaster",
+  "160000": "Legend",
+  "320000": "Mythic",
+  "9999999999": "Immortal"
+}

@@ -10,6 +10,7 @@ const gTTS = require("node-gtts")("en-us");
 const assert = require("assert");
 const { getBufferFromStream } = require("../utils/stream2buf.util");
 const { sleep } = require("../utils/sleep.util");
+const { UserService } = require("../services/user.service");
 const words = require("../datasets/dictionary.dataset.json").data;
 
 // Middlewares
@@ -124,7 +125,7 @@ class Challenge {
     this.startedBy = startedBy;
     this.startedByAvatarUrl = startedByAvatarUrl;
     this.durationPerRound = durationPerRound;
-    this.roundsLeft = roundsLeft;
+    this.roundsLeft = 1;
     this.multipleGuesses = multipleGuesses;
 
     this.challengeMainLoop(client);
@@ -192,12 +193,27 @@ class Challenge {
 
     // Check if the game has concluded
     if (this.roundsLeft-- === 0) {
+      // Update scores in database
+      await Promise.all(
+        Object.keys(this.scores)
+          .map(async userId => {
+            return await UserService.incrementScore(
+              await client.users.fetch(userId),
+              this.scores[userId],
+            );
+          }),
+      );
+
+      // Fetch scores of winners
+      const scores = await UserService.fetchScores(...Object.keys(this.scores));
+
+      // Post results
       const channel = await client.channels.fetch(this.channelId);
       await channel.send({
         embeds: [
           new EmbedBuilder()
             .setColor("Fuchsia")
-            .setTitle("SpellIt Challenge Ended")
+            .setTitle("Spell_It Challenge Ended")
             .setAuthor({
               name: `Started by ${this.startedBy}`,
               iconURL: this.startedByAvatarUrl,
@@ -208,7 +224,7 @@ class Challenge {
                   .sort((left, right) => this.scores[right] - this.scores[left])
                   .map(async userId => ({
                     name: (await client.users.fetch(userId)).username,
-                    value: `+ ${this.scores[userId]}`,
+                    value: `**${scores[userId]?.score}, ${scores[userId]?.title}** (+${this.scores[userId]})`,
                   })),
               ),
             ),

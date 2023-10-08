@@ -1,5 +1,6 @@
 // Imports
 const mongoose = require("mongoose");
+const { parseTierTitle } = require("../utils/tier_title_parser.util");
 
 // Constants
 const schema = new mongoose.Schema({
@@ -19,7 +20,7 @@ const schema = new mongoose.Schema({
   },
   title: {
     type: String,
-    default: "Novice",
+    default: parseTierTitle(0),
   },
 }, {
   timestamps: true,
