@@ -5,12 +5,13 @@ const {
   CommandInteraction,
 } = require("discord.js");
 const { ChallengesMap } = require("../models/challenges_map.model");
+const { META } = require("../configs/discord_bot.config.json");
 
 // Constants
 const instance =
   new SlashCommandBuilder()
     .setName("stop")
-    .setDescription("Aborts the guild challenge");
+    .setDescription(`Aborts the ${META.name} guild challenge`);
 
 // Middlewares
 
@@ -24,7 +25,7 @@ async function handler(interaction) {
   if (challenge === undefined) {
     interaction.reply({
       ephemeral: true,
-      content: "No ongoing Spell_It challenges at the moment!",
+      content: `No ongoing ${META.name} challenges at the moment!`,
     });
     return;
   }
@@ -39,7 +40,7 @@ async function handler(interaction) {
           name: `Stopped by ${interaction.user.username}`,
           iconURL: interaction.user.avatarURL({ size: 32 }),
         })
-        .setTitle("Spell_It Challenge Aborted"),
+        .setTitle(`${META.name} Challenge Aborted`),
     ],
   });
 }

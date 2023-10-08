@@ -11,6 +11,7 @@ const assert = require("assert");
 const { getBufferFromStream } = require("../utils/stream2buf.util");
 const { sleep } = require("../utils/sleep.util");
 const { UserService } = require("../services/user.service");
+const { META } = require("../configs/discord_bot.config.json");
 const words = require("../datasets/dictionary.dataset.json").data;
 
 // Middlewares
@@ -213,7 +214,7 @@ class Challenge {
         embeds: [
           new EmbedBuilder()
             .setColor("Fuchsia")
-            .setTitle("Spell_It Challenge Ended")
+            .setTitle(`${META.name} Challenge Ended`)
             .setAuthor({
               name: `Started by ${this.startedBy}`,
               iconURL: this.startedByAvatarUrl,

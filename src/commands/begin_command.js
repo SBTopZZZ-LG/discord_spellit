@@ -9,13 +9,13 @@ const {
 const { ChallengesMap } = require("../models/challenges_map.model");
 const { duration1, rounds1 } = require("../utils/interaction_options_parser.util");
 const { formatDuration } = require("../utils/duration_formatter.util");
-const assert = require("assert");
+const { META } = require("../configs/discord_bot.config.json");
 
 // Constants
 const instance =
   new SlashCommandBuilder()
     .setName("begin")
-    .setDescription("Starts the SpellIt challenge")
+    .setDescription(`Starts the ${META.name} challenge`)
     .addStringOption(
       new SlashCommandStringOption()
         .setName("duration")
@@ -72,7 +72,7 @@ async function handler(interaction) {
       embeds: [
         new EmbedBuilder()
           .setColor("Fuchsia")
-          .setTitle("Spell_It Challenge Started")
+          .setTitle(`${META.name} Challenge Started`)
           .setAuthor({
             name: `Started by ${interaction.user.username}`,
             iconURL: interaction.user.avatarURL({ size: 32 }),
