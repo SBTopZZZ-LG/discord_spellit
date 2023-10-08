@@ -1,7 +1,8 @@
 // Imports
-const { Client, Events, GatewayIntentBits } = require("discord.js");
+const { Client, Events, GatewayIntentBits, ActivityType, PresenceUpdateStatus } = require("discord.js");
 const { setupCommands } = require("../utils/commands.util");
 const { ChallengesMap } = require("../models/challenges_map.model");
+const { INVITE_LINK } = require("../configs/discord_bot.config.json");
 
 // Constants
 const { DISCORD_BOT_TOKEN } = process.env;
@@ -17,6 +18,18 @@ const client = new Client({
 // Middlewares
 client.once(Events.ClientReady, _ => {
   console.log("[discord.script]", "Discord bot login success");
+
+  // Update bot
+  client.user.setPresence({
+    activities: [
+        {
+            name: "/help",
+            type: ActivityType.Listening,
+            url: INVITE_LINK,
+        },
+    ],
+    status: PresenceUpdateStatus.Online,
+  });
 
   // Setup commands
   setupCommands(client);
