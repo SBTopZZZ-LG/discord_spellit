@@ -3,6 +3,11 @@
 	"PERMISSIONS": 2147679296,
 	"INVITE_LINK": "https://discord.com/api/oauth2/authorize?client_id=1159883355433746503&permissions=2147679296&scope=bot",
 	"META": {
+		"author": {
+			"discord_id": 352312490664919040,
+			"username": "SBTOPZZZ",
+			"url": "https://github.com/SBTopZZZ-LG"
+		},
 		"name": "Spell-iT",
 		"color": "#FC00FF",
 		"bannerImageUrl": "https://i.ibb.co/F0kvwJK/Spell-It-cropped.jpg"
