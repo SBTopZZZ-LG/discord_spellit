@@ -71,7 +71,7 @@ async function handler(interaction) {
     interaction.reply({
       embeds: [
         new EmbedBuilder()
-          .setColor("Fuchsia")
+          .setColor(META.color)
           .setTitle(`${META.name} Challenge Started`)
           .setAuthor({
             name: `Started by ${interaction.user.username}`,

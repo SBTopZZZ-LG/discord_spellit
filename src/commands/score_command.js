@@ -1,6 +1,7 @@
 // Imports
 const { SlashCommandBuilder, CommandInteraction, EmbedBuilder } = require("discord.js");
 const { UserService } = require("../services/user.service");
+const { META } = require("../configs/discord_bot.config.json");
 
 // Constants
 const instance =
@@ -19,7 +20,7 @@ async function handler(interaction) {
   await interaction.reply({
     embeds: [
       new EmbedBuilder()
-        .setColor("Fuchsia")
+        .setColor(META.color)
         .setTitle(`**${interaction.user.username}**'s Score`)
         .setAuthor({
           name: `Requested by ${interaction.user.username}`,

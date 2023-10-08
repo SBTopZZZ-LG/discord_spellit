@@ -3,6 +3,7 @@
 	"PERMISSIONS": 2147679296,
 	"INVITE_LINK": "https://discord.com/api/oauth2/authorize?client_id=1159883355433746503&permissions=2147679296&scope=bot",
 	"META": {
-		"name": "Spell-iT"
+		"name": "Spell-iT",
+		"color": "#FC00FF"
 	}
 }

@@ -35,7 +35,7 @@ async function handler(interaction) {
   interaction.reply({
     embeds: [
       new EmbedBuilder()
-        .setColor("Fuchsia")
+        .setColor(META.color)
         .setAuthor({
           name: `Stopped by ${interaction.user.username}`,
           iconURL: interaction.user.avatarURL({ size: 32 }),

@@ -167,7 +167,7 @@ class Challenge {
       channel.send({
         embeds: [
           new EmbedBuilder()
-            .setColor("Fuchsia")
+            .setColor(META.color)
             .setTitle(`The word was "${this.words[this.words.length - 1].word}".`)
             .setAuthor({
               name: `Started by ${this.startedBy}`,
@@ -213,7 +213,7 @@ class Challenge {
       await channel.send({
         embeds: [
           new EmbedBuilder()
-            .setColor("Fuchsia")
+            .setColor(META.color)
             .setTitle(`${META.name} Challenge Ended`)
             .setAuthor({
               name: `Started by ${this.startedBy}`,
@@ -249,7 +249,7 @@ class Challenge {
     const message = await channel.send({
       embeds: [
         new EmbedBuilder()
-          .setColor("Fuchsia")
+          .setColor(META.color)
           .setTitle(`Word #${this.words.length}`)
           .setDescription(`Revealing the word in **${Math.floor(this.durationPerRound / 1000)} seconds**`),
       ],
@@ -273,7 +273,7 @@ class Challenge {
       message.edit({
         embeds: [
           new EmbedBuilder()
-            .setColor("Fuchsia")
+            .setColor(META.color)
             .setTitle(`Word #${this.words.length}`)
             .setDescription(`Revealing the word in **${remaining} seconds**`),
         ],
