@@ -71,6 +71,7 @@ async function handler(interaction) {
     interaction.reply({
       embeds: [
         new EmbedBuilder()
+          .setThumbnail(META.bannerImageUrl)
           .setColor(META.color)
           .setTitle(`${META.name} Challenge Started`)
           .setAuthor({

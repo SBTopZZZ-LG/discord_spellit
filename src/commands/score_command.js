@@ -20,6 +20,7 @@ async function handler(interaction) {
   await interaction.reply({
     embeds: [
       new EmbedBuilder()
+        .setThumbnail(META.bannerImageUrl)
         .setColor(META.color)
         .setTitle(`**${interaction.user.username}**'s Score`)
         .setAuthor({

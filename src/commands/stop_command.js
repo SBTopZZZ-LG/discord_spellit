@@ -35,6 +35,7 @@ async function handler(interaction) {
   interaction.reply({
     embeds: [
       new EmbedBuilder()
+        .setThumbnail(META.bannerImageUrl)
         .setColor(META.color)
         .setAuthor({
           name: `Stopped by ${interaction.user.username}`,
