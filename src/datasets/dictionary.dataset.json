@@ -20,9 +20,19 @@
 			"meaning": "To regard with horror or detestation; to shrink back with shuddering from; to feel excessive repugnance toward; to detest to extremity; to loathe."
 		},
 		{
+			"word": "abolish",
+			"phonetic": "/əˈbɒlɪʃ/",
+			"meaning": "To end a law, system, institution, custom or practice."
+		},
+		{
 			"word": "abrasive",
 			"phonetic": "/əˈbɹeɪ.sɪv/",
 			"meaning": "A substance or material such as sandpaper, pumice, or emery, used for cleaning, smoothing, or polishing."
+		},
+		{
+			"word": "abruptly",
+			"phonetic": "/ə.ˈbɹʌpt.li/",
+			"meaning": "In an abrupt manner; without giving notice, or without the usual forms; suddenly; precipitously."
 		},
 		{
 			"word": "absolve",
@@ -50,6 +60,49 @@
 			"meaning": "To render fit, suitable, or correspondent; to adapt."
 		},
 		{
+			"word": "accomplish",
+			"phonetic": "/əˈkɐm.plɪʃ/",
+			"meaning": "To finish successfully."
+		},
+		{
+			"word": "accumulate",
+			"phonetic": "/əˈkjuːmjʊˌleɪt/",
+			"meaning": "To heap up in a mass; to pile up; to collect or bring together (either literally or figuratively)"
+		},
+		{
+			"word": "accurate",
+			"phonetic": "/ˈæk.jə.ɹɪt/",
+			"meaning": "Telling the truth or giving a true result; exact; not defective or faulty"
+		},
+		{
+			"word": "acknowledge",
+			"phonetic": "/əkˈnɒ.lɪdʒ/",
+			"meaning": "To admit the knowledge of; to recognize as a fact or truth; to declare one's belief in"
+		},
+		{
+			"word": "acquire",
+			"phonetic": "/əˈkwaɪə/",
+			"meaning": "To get."
+		},
+		{
+			"word": "adapt",
+			"phonetic": "/əˈdæpt/",
+			"meaning": "To make suitable; to make to correspond; to fit or suit"
+		},
+		{
+			"word": "addict",
+			"phonetic": "/ˈæ.dɪkt/",
+			"meaning": "A person who is addicted, especially to a harmful drug"
+		},
+		{
+			"word": "adequate",
+			"meaning": "To equalize; to make adequate."
+		},
+		{
+			"word": "adjacent",
+			"meaning": "Something that lies next to something else, especially the side of a right triangle that is neither the hypotenuse nor the opposite."
+		},
+		{
 			"word": "admonish",
 			"phonetic": "/ədˈmɒn.ɪʃ/",
 			"meaning": "To warn or notify of a fault; to reprove gently or kindly, but seriously; to exhort."
@@ -74,16 +127,39 @@
 			"meaning": "The study of art or beauty."
 		},
 		{
+			"word": "affiliation",
+			"phonetic": "/əˌfɪliˈeɪʃən/",
+			"meaning": "The relationship resulting from affiliating one thing with another."
+		},
+		{
 			"word": "affinity",
 			"phonetic": "/əˈfɪnɪti/",
 			"meaning": "A natural attraction or feeling of kinship to a person or thing."
+		},
+		{
+			"word": "agitate",
+			"phonetic": "/ˈæ.dʒɪ.teɪt/",
+			"meaning": "To disturb or excite; to perturb or stir up (a person)."
+		},
+		{
+			"word": "allege",
+			"phonetic": "/əˈlɛdʒ/",
+			"meaning": "To state under oath, to plead."
 		},
 		{
 			"word": "alleviate",
 			"phonetic": "/əˈli.vi.eɪt/",
 			"meaning": "To make less severe, as a pain or difficulty."
 		},
-		{ "word": "altercation", "meaning": "Heated or angry dispute" },
+		{
+			"word": "allocate",
+			"phonetic": "/ˈæl.ə.keɪt/",
+			"meaning": "To set aside for a purpose."
+		},
+		{
+			"word": "altercation",
+			"meaning": "Heated or angry dispute"
+		},
 		{
 			"word": "alternative",
 			"phonetic": "/ɒl.ˈtɜː(ɹ).nə.tɪv/",
@@ -102,6 +178,11 @@
 			"word": "ameliorate",
 			"phonetic": "/əˈmiːli.əɹeɪt/",
 			"meaning": "To make better, or improve, something perceived to be in a negative condition."
+		},
+		{
+			"word": "amendment",
+			"phonetic": "/ʌˈmɛnd.mənt/",
+			"meaning": "An alteration or change for the better; correction of a fault or of faults; reformation of life by quitting vices."
 		},
 		{
 			"word": "amicable",
@@ -144,6 +225,11 @@
 			"meaning": "Violent hatred leading to active opposition; active enmity; energetic dislike."
 		},
 		{
+			"word": "announce",
+			"phonetic": "/əˈnaʊns/",
+			"meaning": "To give public notice, especially for the first time; to make known"
+		},
+		{
 			"word": "anomaly",
 			"meaning": "A deviation from a rule or from what is regarded as normal; an outlier."
 		},
@@ -158,9 +244,23 @@
 			"meaning": "An opponent or enemy."
 		},
 		{
+			"word": "antagonize",
+			"meaning": "To work against; to oppose (especially to incite reaction)"
+		},
+		{
 			"word": "anthology",
 			"phonetic": "/ænˈθɒlədʒɪ/",
 			"meaning": "A collection of literary works, such as poems or short stories, especially a collection from various authors."
+		},
+		{
+			"word": "anticipate",
+			"phonetic": "/ænˈtɪs.ɪ.peɪt/",
+			"meaning": "To act before (someone), especially to prevent an action."
+		},
+		{
+			"word": "anxious",
+			"phonetic": "/ˈaŋ(k)ʃəs/",
+			"meaning": "Nervous and worried."
 		},
 		{
 			"word": "apathy",
@@ -172,8 +272,28 @@
 			"phonetic": "/əˈpɔːl/",
 			"meaning": "To fill with horror; to dismay."
 		},
-		{ "word": "apprehend", "meaning": "To take or seize; to take hold of." },
-		{ "word": "approximate", "meaning": "To estimate." },
+		{
+			"word": "apprehend",
+			"meaning": "To take or seize; to take hold of."
+		},
+		{
+			"word": "approach",
+			"phonetic": "/əˈpɹəʊt͡ʃ/",
+			"meaning": "The act of drawing near; a coming or advancing near."
+		},
+		{
+			"word": "appropriate",
+			"meaning": "To make suitable; to suit."
+		},
+		{
+			"word": "approval",
+			"phonetic": "/əˈpɹuːvəl/",
+			"meaning": "An expression granting permission; an indication of agreement with a proposal; an acknowledgement that a person, thing or event meets requirements."
+		},
+		{
+			"word": "approximate",
+			"meaning": "To estimate."
+		},
 		{
 			"word": "arbitrary",
 			"meaning": "Anything arbitrary, such as an arithmetical value or a fee."
@@ -188,11 +308,25 @@
 			"phonetic": "/ˈɑːdjuːəs/",
 			"meaning": "Needing or using up much energy; testing powers of endurance."
 		},
-		{ "word": "arid", "phonetic": "/ˈæ.ɹɪd/", "meaning": "Very dry." },
+		{
+			"word": "argument",
+			"phonetic": "/ˈɑːɡjʊmənt/",
+			"meaning": "A fact or statement used to support a proposition; a reason."
+		},
+		{
+			"word": "arid",
+			"phonetic": "/ˈæ.ɹɪd/",
+			"meaning": "Very dry."
+		},
 		{
 			"word": "articulate",
 			"phonetic": "/ɑː(ɹ)ˈtɪk.jʊ.lət/",
 			"meaning": "An animal of the subkingdom Articulata."
+		},
+		{
+			"word": "artifact",
+			"phonetic": "/ˈɑːtɪfækt/",
+			"meaning": "An object made or shaped by human hand or labor."
 		},
 		{
 			"word": "assiduous",
@@ -256,7 +390,21 @@
 			"phonetic": "/ævəd/",
 			"meaning": "Enthusiastic; keen; eager; showing great interest in something or desire to do something"
 		},
-		{ "word": "ban", "phonetic": "/bæn/", "meaning": "Prohibition." },
+		{
+			"word": "avoid",
+			"phonetic": "/əˈvɔɪd/",
+			"meaning": "To try not to meet or communicate with (a person); to shun"
+		},
+		{
+			"word": "bamboozle",
+			"phonetic": "/bæm.ˈbuː.zəl/",
+			"meaning": "To con, defraud, trick, to make a fool of, to humbug or impose on someone."
+		},
+		{
+			"word": "ban",
+			"phonetic": "/bæn/",
+			"meaning": "Prohibition."
+		},
 		{
 			"word": "belligerent",
 			"meaning": "A state or other armed participant in warfare"
@@ -267,9 +415,29 @@
 			"meaning": "Something that is beneficial."
 		},
 		{
+			"word": "benefit",
+			"phonetic": "/ˈbɛn.ɪ.fɪt/",
+			"meaning": "An advantage; help or aid from something."
+		},
+		{
 			"word": "benevolent",
 			"phonetic": "/bəˈnɛvələnt/",
 			"meaning": "Having a disposition to do good."
+		},
+		{
+			"word": "bewilder",
+			"phonetic": "/bɪˈwɪldə(ɹ)/",
+			"meaning": "To confuse, disorientate, or puzzle someone, especially with many different choices."
+		},
+		{
+			"word": "bewildered",
+			"phonetic": "/bəˈwɪldəd/",
+			"meaning": "To confuse, disorientate, or puzzle someone, especially with many different choices."
+		},
+		{
+			"word": "bias",
+			"phonetic": "/ˈbaɪəs/",
+			"meaning": "Inclination towards something; predisposition, partiality, prejudice, preference, predilection."
 		},
 		{
 			"word": "biased",
@@ -302,12 +470,22 @@
 			"meaning": "The quality of being brief in duration."
 		},
 		{
+			"word": "briskly",
+			"phonetic": "/ˈbɹɪskli/",
+			"meaning": "Fast, quickly, swiftly."
+		},
+		{
 			"word": "bureaucratic",
 			"meaning": "Of or pertaining to bureaucracy or the actions of bureaucrats."
 		},
 		{
 			"word": "cajole",
 			"meaning": "To persuade someone to do something which they are reluctant to do, especially by flattery or promises; to coax."
+		},
+		{
+			"word": "calculate",
+			"phonetic": "/ˈkælkjəleɪt/",
+			"meaning": "To determine the value of something or the solution to something by a mathematical process."
 		},
 		{
 			"word": "callous",
@@ -334,6 +512,11 @@
 			"meaning": "A substance that increases the rate of a chemical reaction without being consumed in the process."
 		},
 		{
+			"word": "catastrophe",
+			"phonetic": "/kəˈtæstɹəfi/",
+			"meaning": "Any large and disastrous event of great significance"
+		},
+		{
 			"word": "catharsis",
 			"phonetic": "/kəˈθɑːsɪs/",
 			"meaning": "A release of emotional tension after an overwhelming vicarious experience, resulting in the purging or purification of the emotions, as through watching a dramatic production (especially a tragedy)."
@@ -347,6 +530,11 @@
 			"word": "caustic",
 			"phonetic": "/ˈkɒstɪk/",
 			"meaning": "Any substance or means which, applied to animal or other organic tissue, burns, corrodes, or destroys it by chemical action; an escharotic."
+		},
+		{
+			"word": "cease",
+			"phonetic": "/siːs/",
+			"meaning": "Cessation; extinction (see without cease)."
 		},
 		{
 			"word": "censure",
@@ -375,6 +563,21 @@
 		{
 			"word": "circumvent",
 			"meaning": "To avoid or get around something; to bypass"
+		},
+		{
+			"word": "citizen",
+			"phonetic": "/ˈsɪtɪzən/",
+			"meaning": "A resident of a city or town, especially one with legally-recognized rights or duties."
+		},
+		{
+			"word": "civilization",
+			"phonetic": "[ˌsɪv.ə.lɑeˈzæɪ.ʃən]",
+			"meaning": "An organized culture encompassing many communities, often on the scale of a nation or a people; a stage or system of social, political or technical development."
+		},
+		{
+			"word": "claim",
+			"phonetic": "/kleɪm/",
+			"meaning": "A demand of ownership made for something."
 		},
 		{
 			"word": "clairvoyant",
@@ -414,11 +617,19 @@
 			"phonetic": "/kəˈmɛns/",
 			"meaning": "To begin, start."
 		},
-		{ "word": "commiserate", "meaning": "Commiserating, pitying, lamentful" },
+		{
+			"word": "commiserate",
+			"meaning": "Commiserating, pitying, lamentful"
+		},
 		{
 			"word": "compassion",
 			"phonetic": "/kəmˈpæʃ.ən/",
 			"meaning": "Deep awareness of the suffering of another, coupled with the wish to relieve it."
+		},
+		{
+			"word": "compel",
+			"phonetic": "/kəmˈpɛl/",
+			"meaning": "To drive together, round up"
 		},
 		{
 			"word": "compels",
@@ -426,15 +637,33 @@
 			"meaning": "To drive together, round up"
 		},
 		{
+			"word": "competent",
+			"phonetic": "/ˈkɒmpətənt/",
+			"meaning": "Having sufficient skill, knowledge, ability, or qualifications."
+		},
+		{
 			"word": "comply",
 			"meaning": "To yield assent; to accord; to acquiesce, agree, consent; to adapt oneself, to conform."
+		},
+		{
+			"word": "component",
+			"phonetic": "/kʌmˈpoʊnənt/",
+			"meaning": "A smaller, self-contained part of a larger entity. Often refers to a manufactured object that is part of a larger device."
+		},
+		{
+			"word": "compose",
+			"phonetic": "/kəmˈpəʊz/",
+			"meaning": "To make something by merging parts."
 		},
 		{
 			"word": "composure",
 			"phonetic": "/kəmˈpəʊʒə/",
 			"meaning": "Calmness of mind or matter, self-possession."
 		},
-		{ "word": "comprehensive", "meaning": "A comprehensive school." },
+		{
+			"word": "comprehensive",
+			"meaning": "A comprehensive school."
+		},
 		{
 			"word": "compromise",
 			"phonetic": "/ˈkɒmpɹəˌmaɪz/",
@@ -456,9 +685,29 @@
 			"meaning": "To end; to come to an end."
 		},
 		{
+			"word": "conclusion",
+			"phonetic": "/kənˈkluːʒən/",
+			"meaning": "The end, finish, close or last part of something."
+		},
+		{
+			"word": "conclusive",
+			"phonetic": "/kənˈklusɪv/",
+			"meaning": "Pertaining to a conclusion."
+		},
+		{
+			"word": "concur",
+			"phonetic": "/kənˈkɜː/",
+			"meaning": "To unite or agree (in action or opinion); to have a common opinion; to coincide; to correspond."
+		},
+		{
 			"word": "concurrent",
 			"phonetic": "/kɒŋˈkʌɹənt/",
 			"meaning": "One who, or that which, concurs; a joint or contributory cause."
+		},
+		{
+			"word": "condemn",
+			"phonetic": "/kənˈdɛm/",
+			"meaning": "To strongly criticise or denounce; to excoriate the perpetrators of."
 		},
 		{
 			"word": "condescending",
@@ -471,8 +720,18 @@
 			"meaning": "(grammar) A conditional sentence; a statement that depends on a condition being true or false."
 		},
 		{
+			"word": "condor",
+			"phonetic": "/ˈkɒndɔː(ɹ)/",
+			"meaning": "Either of two New World vultures, Vultur gryphus of the Andes or Gymnogyps californianus, a nearly extinct vulture of the mountains of California."
+		},
+		{
 			"word": "confiscate",
 			"meaning": "To use one's authority to lay claim to and separate a possession from its holder."
+		},
+		{
+			"word": "conflict",
+			"phonetic": "/kənˈflɪkt/",
+			"meaning": "A clash or disagreement, often violent, between two or more opposing groups or individuals."
 		},
 		{
 			"word": "conformist",
@@ -480,9 +739,19 @@
 			"meaning": "Someone who tries to conform to the mainstream."
 		},
 		{
+			"word": "confront",
+			"phonetic": "/kɒnˈfɹɒnt/",
+			"meaning": "To stand or meet facing, especially in competition, hostility or defiance; to come face to face with"
+		},
+		{
 			"word": "congregation",
 			"phonetic": "/ˌkɒŋɡɹɪˈɡeɪʃən/",
 			"meaning": "The act of congregating or collecting together."
+		},
+		{
+			"word": "congruent",
+			"phonetic": "/ˈkɒŋ.ɡɹuː.ənt/",
+			"meaning": "Corresponding in character; congruous"
 		},
 		{
 			"word": "conjecture",
@@ -504,20 +773,42 @@
 			"meaning": "A sequence of notes or chords that results from repeated shifts in pitch of the same interval."
 		},
 		{
+			"word": "consequence",
+			"phonetic": "/ˈkɒnsɪkwɛns/",
+			"meaning": "That which follows something on which it depends; that which is produced by a cause."
+		},
+		{
 			"word": "consistent",
 			"phonetic": "/kənˈsɪstənt/",
 			"meaning": "(in the plural) Objects or facts that are coexistent, or in agreement with one another."
 		},
-		{ "word": "constituent", "meaning": "A part, or component of a whole" },
+		{
+			"word": "constituent",
+			"meaning": "A part, or component of a whole"
+		},
 		{
 			"word": "construct",
 			"phonetic": "/ˈkɒn.stɹʌkt/",
 			"meaning": "Something constructed from parts."
 		},
 		{
+			"word": "consult",
+			"meaning": "The act of consulting or deliberating; consultation"
+		},
+		{
+			"word": "context",
+			"phonetic": "/ˈkɒntɛkst/",
+			"meaning": "The surroundings, circumstances, environment, background or settings that determine, specify, or clarify the meaning of an event or other occurrence."
+		},
+		{
 			"word": "contingent",
 			"phonetic": "/kənˈtɪn.dʒənt/",
 			"meaning": "An event which may or may not happen; that which is unforeseen, undetermined, or dependent on something future."
+		},
+		{
+			"word": "continuous",
+			"phonetic": "/kənˈtɪn.juː.əs/",
+			"meaning": "Without stopping; without a break, cessation, or interruption"
 		},
 		{
 			"word": "contract",
@@ -530,9 +821,19 @@
 			"meaning": "A difference in lightness, brightness and/or hue between two colours that makes them more or less distinguishable."
 		},
 		{
+			"word": "contribute",
+			"phonetic": "/kənˈt(ʃ)ɹɪb.juːt/",
+			"meaning": "To give something that is or becomes part of a larger whole."
+		},
+		{
 			"word": "convergence",
 			"phonetic": "/kɒnˈvɜː(ɹ)d͡ʒəns/",
 			"meaning": "The act of moving toward union or uniformity."
+		},
+		{
+			"word": "convince",
+			"phonetic": "/kənˈvɪns/",
+			"meaning": "To make someone believe, or feel sure about something, especially by using logic, argument or evidence."
 		},
 		{
 			"word": "copious",
@@ -542,6 +843,11 @@
 		{
 			"word": "cordial",
 			"meaning": "A concentrated noncarbonated soft drink which is diluted with water before drinking."
+		},
+		{
+			"word": "correspond",
+			"phonetic": "/ˌkɒɹəˈspɒnd/",
+			"meaning": "(constructed with to) To be equivalent or similar in character, quantity, quality, origin, structure, function etc."
 		},
 		{
 			"word": "corroborate",
@@ -559,6 +865,11 @@
 			"meaning": "A single criterion."
 		},
 		{
+			"word": "culture",
+			"phonetic": "/ˈkʌlt͡ʃə/",
+			"meaning": "The arts, customs, lifestyles, background, and habits that characterize a particular society or nation."
+		},
+		{
 			"word": "cursory",
 			"phonetic": "/ˈkɵː.sɘ.ɹi/",
 			"meaning": "Hasty; superficial; careless"
@@ -567,6 +878,11 @@
 			"word": "cynic",
 			"phonetic": "/ˈsɪnɪk/",
 			"meaning": "A person who believes that all people are motivated by selfishness."
+		},
+		{
+			"word": "dawdle",
+			"phonetic": "/ˈdɔːdəl/",
+			"meaning": "A dawdler."
 		},
 		{
 			"word": "dearth",
@@ -578,9 +894,22 @@
 			"meaning": "To make feeble; to weaken."
 		},
 		{
+			"word": "decade",
+			"meaning": "A group, set, or series of ten , particularly:"
+		},
+		{
 			"word": "decadence",
 			"phonetic": "/ˈdɛkədəns/",
 			"meaning": "A state of moral or artistic decline or deterioration; decay"
+		},
+		{
+			"word": "deceitful",
+			"phonetic": "/-fl̩/",
+			"meaning": "Deliberately misleading or cheating."
+		},
+		{
+			"word": "declare",
+			"meaning": "To make clear, explain, interpret."
 		},
 		{
 			"word": "deference",
@@ -610,6 +939,11 @@
 			"word": "demeanor",
 			"phonetic": "/dɪˈmiːnə(ɹ)/",
 			"meaning": "The social, non-verbal behaviours (such as body language and facial expressions) that are characteristic of a person."
+		},
+		{
+			"word": "democracy",
+			"phonetic": "/dɪˈmɒkɹəsi/",
+			"meaning": "Rule by the people, especially as a form of government; either directly or through elected representatives (representative democracy)."
 		},
 		{
 			"word": "demonstrate",
@@ -651,7 +985,10 @@
 			"phonetic": "/dɪˈspɒndənt/",
 			"meaning": "In low spirits from loss of hope or courage."
 		},
-		{ "word": "despot", "meaning": "A ruler with absolute power; a tyrant." },
+		{
+			"word": "despot",
+			"meaning": "A ruler with absolute power; a tyrant."
+		},
 		{
 			"word": "detract",
 			"phonetic": "/dɪˈtɹækt/",
@@ -666,6 +1003,11 @@
 			"word": "devious",
 			"phonetic": "/ˈdiːvi.əs/",
 			"meaning": "Cunning or deceiving, not straightforward or honest, not frank"
+		},
+		{
+			"word": "devour",
+			"phonetic": "/dɪˈvaʊ(w)ə(ɹ)/",
+			"meaning": "To eat quickly, greedily, hungrily, or ravenously."
 		},
 		{
 			"word": "didactic",
@@ -692,7 +1034,15 @@
 			"phonetic": "/ˈdɪlɪdʒənt/",
 			"meaning": "Performing with industrious concentration; hard-working and focused."
 		},
-		{ "word": "discredit", "meaning": "Discrediting or disbelieving." },
+		{
+			"word": "dimension",
+			"phonetic": "/daɪˈmɛnʃən/",
+			"meaning": "A single aspect of a given thing."
+		},
+		{
+			"word": "discredit",
+			"meaning": "Discrediting or disbelieving."
+		},
 		{
 			"word": "disdain",
 			"phonetic": "/dɪsˈdeɪn/",
@@ -707,6 +1057,11 @@
 			"word": "disparity",
 			"phonetic": "/dɪsˈpæɹɪti/",
 			"meaning": "The state of being unequal; difference."
+		},
+		{
+			"word": "dissatisfied",
+			"phonetic": "/dɪsˈsætɪsˌfaɪd/",
+			"meaning": "Feeling or displaying disappointment or a lack of contentment."
 		},
 		{
 			"word": "disseminate",
@@ -748,6 +1103,11 @@
 			"meaning": "A tactic used to draw attention away from the real threat or action."
 		},
 		{
+			"word": "diversity",
+			"phonetic": "/daɪˈvɜː(ɹ)sɪti/",
+			"meaning": "The quality of being diverse or different; difference or unlikeness."
+		},
+		{
 			"word": "divert",
 			"phonetic": "/daɪˈvɜːt/",
 			"meaning": "To turn aside from a course."
@@ -757,14 +1117,33 @@
 			"meaning": "Ready to accept instruction or direction; obedient; subservient."
 		},
 		{
+			"word": "dominate",
+			"phonetic": "/ˈdɒməˌneɪt/",
+			"meaning": "Ruling; governing; prevailing"
+		},
+		{
 			"word": "dormant",
 			"phonetic": "/ˈdɔːmənt/",
 			"meaning": "A crossbeam or joist."
 		},
 		{
+			"word": "drastic",
+			"meaning": "A powerful, fast-acting purgative medicine."
+		},
+		{
+			"word": "drowsy",
+			"phonetic": "/ˈdɹaʊzi/",
+			"meaning": "Inclined to drowse; heavy with sleepiness"
+		},
+		{
 			"word": "duplicity",
 			"phonetic": "/dju-/",
 			"meaning": "Intentional deceptiveness; double-dealing."
+		},
+		{
+			"word": "edible",
+			"phonetic": "/ˈɛdɪbl/",
+			"meaning": "Anything edible."
 		},
 		{
 			"word": "edifice",
@@ -775,13 +1154,28 @@
 			"word": "effervescent",
 			"meaning": "(of a liquid) Giving off bubbles; fizzy."
 		},
-		{ "word": "egocentric", "meaning": "A person who is egocentric." },
+		{
+			"word": "effortless",
+			"meaning": "Without effort."
+		},
+		{
+			"word": "egocentric",
+			"meaning": "A person who is egocentric."
+		},
 		{
 			"word": "egregious",
 			"phonetic": "/əˈɡɹiː.dʒi.əs/",
 			"meaning": "Usually in a negative sense: conspicuous, exceptional, outstanding."
 		},
-		{ "word": "elapse", "meaning": "(of time) To pass or move by." },
+		{
+			"word": "elaborate",
+			"phonetic": "/ɪˈlæbəɹeɪt/",
+			"meaning": "To develop in detail or complexity"
+		},
+		{
+			"word": "elapse",
+			"meaning": "(of time) To pass or move by."
+		},
 		{
 			"word": "elation",
 			"meaning": "An exhilarating psychological state of pride and optimism."
@@ -790,6 +1184,11 @@
 			"word": "elicit",
 			"phonetic": "/ɪˈlɪsɪt/",
 			"meaning": "To evoke, educe (emotions, feelings, responses, etc.); to generate, obtain, or provoke as a response or answer."
+		},
+		{
+			"word": "eligible",
+			"phonetic": "/ˈɛlɪdʒəb(ə)l/",
+			"meaning": "One who is eligible."
 		},
 		{
 			"word": "elude",
@@ -812,11 +1211,24 @@
 			"meaning": "Identification with or understanding of the thoughts, feelings, or emotional state of another person."
 		},
 		{
+			"word": "emphasize",
+			"phonetic": "/ˈɛm.fə.saɪz/",
+			"meaning": "To stress, give emphasis or extra weight to (something)."
+		},
+		{
 			"word": "emulate",
 			"phonetic": "/ˈɛm.jə.leɪt/",
 			"meaning": "To attempt to equal or be the same as."
 		},
-		{ "word": "encompass", "meaning": "To form a circle around; to encircle." },
+		{
+			"word": "encompass",
+			"meaning": "To form a circle around; to encircle."
+		},
+		{
+			"word": "encourage",
+			"phonetic": "/ɪnˈkʌɹɪdʒ/",
+			"meaning": "To mentally support; to motivate, give courage, hope or spirit."
+		},
 		{
 			"word": "endeavor",
 			"phonetic": "/ɪnˈdɛv.ə/",
@@ -837,9 +1249,19 @@
 			"meaning": "Something which lasts for a short period of time."
 		},
 		{
+			"word": "equation",
+			"phonetic": "/ɪˈkweɪʃən/",
+			"meaning": "The act or process of equating two or more things, or the state of those things being equal (that is, identical)."
+		},
+		{
 			"word": "equitable",
 			"phonetic": "/ˈɛk.wɪ.tə.bəl/",
 			"meaning": "Marked by or having equity."
+		},
+		{
+			"word": "equivalent",
+			"phonetic": "/ɪˈkwɪvələnt/",
+			"meaning": "Anything that is virtually equal to something else, or has the same value, force, etc."
 		},
 		{
 			"word": "equivocal",
@@ -862,6 +1284,16 @@
 			"meaning": "To increase (something) in extent or intensity; to intensify or step up."
 		},
 		{
+			"word": "establish",
+			"phonetic": "/ɪˈstæb.lɪʃ/",
+			"meaning": "To make stable or firm; to confirm."
+		},
+		{
+			"word": "estimate",
+			"phonetic": "/ˈɛstɨmɨt/",
+			"meaning": "A rough calculation or assessment of the value, size, or cost of something."
+		},
+		{
 			"word": "estrange",
 			"phonetic": "/əˈstɹeɪndʒ/",
 			"meaning": "To cause to feel less close or friendly; alienate. To cease contact with (particularly of a family member or spouse, especially in form estranged)."
@@ -881,11 +1313,19 @@
 			"phonetic": "[ˈɛvəɾəns]",
 			"meaning": "Facts or observations presented in support of an assertion."
 		},
-		{ "word": "evoke", "meaning": "To call out; to draw out or bring forth." },
+		{
+			"word": "evoke",
+			"meaning": "To call out; to draw out or bring forth."
+		},
 		{
 			"word": "exacerbate",
 			"phonetic": "/ɪkˈsæs-/",
 			"meaning": "To make worse (a problem, bad situation, negative feeling, etc.); aggravate; exasperate."
+		},
+		{
+			"word": "exaggerate",
+			"phonetic": "/ɛɡˈzæ.dʒə.ɹeɪt/",
+			"meaning": "To overstate, to describe more than is fact."
 		},
 		{
 			"word": "exasperation",
@@ -896,18 +1336,48 @@
 			"phonetic": "/ɛkˈsɜ(ɹ)(p)t/",
 			"meaning": "A clip, snippet, passage or extract from a larger work such as a news article, a film, or a literary composition."
 		},
-		{ "word": "exemplary", "meaning": "An example, or typical instance." },
+		{
+			"word": "exemplary",
+			"meaning": "An example, or typical instance."
+		},
 		{
 			"word": "exemplify",
 			"phonetic": "/ɛɡˈzɛmplɪfaɪ/",
 			"meaning": "To show or illustrate by example."
 		},
 		{
+			"word": "exhaust",
+			"phonetic": "/ɪɡˈzɔːst/",
+			"meaning": "A system consisting of the parts of an engine through which burned gases or steam are discharged; see also exhaust system."
+		},
+		{
+			"word": "exonerated",
+			"meaning": "To relieve (someone or something) of a load; to unburden (a load)."
+		},
+		{
+			"word": "expansion",
+			"phonetic": "/ɪkˈspænʃən/",
+			"meaning": "The act or process of expanding."
+		},
+		{
+			"word": "expectation",
+			"phonetic": "/ɛkspɛkˈteɪʃən/",
+			"meaning": "The act or state of expecting or looking forward to an event as about to happen."
+		},
+		{
 			"word": "expedient",
 			"phonetic": "/ɪkˈspiːdi.ənt/",
 			"meaning": "A method or means for achieving a particular result, especially when direct or efficient; a resource."
 		},
-		{ "word": "expedite", "meaning": "To accelerate the progress of." },
+		{
+			"word": "expedite",
+			"meaning": "To accelerate the progress of."
+		},
+		{
+			"word": "explain",
+			"phonetic": "/ɛkˈspleɪn/",
+			"meaning": "To make plain, manifest, or intelligible; to clear of obscurity; to illustrate the meaning of."
+		},
 		{
 			"word": "explicit",
 			"phonetic": "/ɪkˈsplɪsɪt/",
@@ -919,6 +1389,26 @@
 			"meaning": "The action of exposing something to something, such as skin to the sunlight."
 		},
 		{
+			"word": "express",
+			"phonetic": "/ɛk.ˈspɹɛs/",
+			"meaning": "A mode of transportation, often a train, that travels quickly or directly."
+		},
+		{
+			"word": "expression",
+			"phonetic": "/ɪkˈspɹɛʃ.ən/",
+			"meaning": "The action of expressing thoughts, ideas, feelings, etc."
+		},
+		{
+			"word": "extend",
+			"phonetic": "/ɛkˈstɛnd/",
+			"meaning": "To increase in extent."
+		},
+		{
+			"word": "extensive",
+			"phonetic": "/ɛksˈtɛn.sɪv/",
+			"meaning": "Having a great extent; covering a large area; vast"
+		},
+		{
 			"word": "extenuating",
 			"meaning": "To lessen; to palliate; to lessen or weaken the force of; to diminish the conception of, as crime, guilt, faults, ills, accusations, etc."
 		},
@@ -926,6 +1416,11 @@
 			"word": "extraneous",
 			"phonetic": "/ekˈstɹæɪ.ni.əs/",
 			"meaning": "Not belonging to, or dependent upon, a thing; without or beyond a thing; foreign"
+		},
+		{
+			"word": "exuberant",
+			"phonetic": "/ɪɡˈzuːbəɹənt/",
+			"meaning": "(of people) Very high-spirited; extremely energetic and enthusiastic."
 		},
 		{
 			"word": "fabricate",
@@ -937,7 +1432,26 @@
 			"phonetic": "/fəˈsɪləteɪt/",
 			"meaning": "To make easy or easier."
 		},
-		{ "word": "falter", "phonetic": "/ˈfɒltə(r)/", "meaning": "Unsteadiness." },
+		{
+			"word": "factor",
+			"phonetic": "/ˈfæktə/",
+			"meaning": "A doer, maker; a person who does things for another person or organization."
+		},
+		{
+			"word": "falter",
+			"phonetic": "/ˈfɒltə(r)/",
+			"meaning": "Unsteadiness."
+		},
+		{
+			"word": "familiar",
+			"phonetic": "/fəˈmɪl.i.ə/",
+			"meaning": "An attendant spirit, often in animal or demon form."
+		},
+		{
+			"word": "famished",
+			"phonetic": "/ˈfæmɪʃt/",
+			"meaning": "To starve (to death); to kill or destroy with hunger."
+		},
 		{
 			"word": "feasible",
 			"phonetic": "/ˈfiːzəbəl/",
@@ -949,11 +1463,19 @@
 			"meaning": "To make a false show or pretence of; to counterfeit or simulate."
 		},
 		{
+			"word": "ferocious",
+			"phonetic": "/fəˈɹəʊʃəs/",
+			"meaning": "Marked by extreme and violent energy."
+		},
+		{
 			"word": "florid",
 			"phonetic": "/ˈflɒɹɪd/",
 			"meaning": "Having a rosy or pale red colour; ruddy."
 		},
-		{ "word": "fluctuate", "meaning": "To vary irregularly; to swing." },
+		{
+			"word": "fluctuate",
+			"meaning": "To vary irregularly; to swing."
+		},
 		{
 			"word": "focus",
 			"phonetic": "/ˈfəʊ.kəs/",
@@ -984,6 +1506,16 @@
 			"meaning": "Dishonest; based on fraud or deception."
 		},
 		{
+			"word": "frequency",
+			"phonetic": "/ˈfɹiːkwənsi/",
+			"meaning": "The rate of occurrence of anything; the relationship between incidence and time period."
+		},
+		{
+			"word": "frequent",
+			"phonetic": "/ˈfɹiː.kwənt/",
+			"meaning": "Done or occurring often; common."
+		},
+		{
 			"word": "frivolous",
 			"phonetic": "/ˈfɹɪv.əl.əs/",
 			"meaning": "Silly, especially at an inappropriate time or in an inappropriate manner."
@@ -1004,9 +1536,29 @@
 			"meaning": "The fact of creating something, or bringing something into being; production, creation."
 		},
 		{
+			"word": "genuine",
+			"phonetic": "/ˈdʒɛnjuːˌaɪn/",
+			"meaning": "Belonging to, or proceeding from the original stock; native"
+		},
+		{
+			"word": "gigantic",
+			"phonetic": "/dʒaɪˈɡæntɪk/",
+			"meaning": "Very large."
+		},
+		{
 			"word": "gist",
 			"phonetic": "/dʒɪst/",
 			"meaning": "The most essential part; the main idea or substance (of a longer or more complicated matter); the crux of a matter; the pith."
+		},
+		{
+			"word": "glare",
+			"phonetic": "/ɡlɛə/",
+			"meaning": "An intense, blinding light."
+		},
+		{
+			"word": "government",
+			"phonetic": "/ˈɡʌvə(n)mənt/",
+			"meaning": "The body with the power to make and/or enforce laws to control a country, land area, people or organization."
 		},
 		{
 			"word": "grueling",
@@ -1026,6 +1578,10 @@
 			"meaning": "Random; chaotic; incomplete; not thorough, constant, or consistent."
 		},
 		{
+			"word": "harsh",
+			"meaning": "To negatively criticize."
+		},
+		{
 			"word": "haughty",
 			"phonetic": "/ˈhɑti/",
 			"meaning": "Conveying in demeanour the assumption of superiority; disdainful, supercilious."
@@ -1035,14 +1591,57 @@
 			"phonetic": "/ˈhiːdənɪst/",
 			"meaning": "Someone devoted to hedonism."
 		},
-		{ "word": "heinous", "meaning": "Totally reprehensible." },
+		{
+			"word": "heinous",
+			"meaning": "Totally reprehensible."
+		},
 		{
 			"word": "heretic",
 			"meaning": "Someone who believes contrary to the fundamental tenets of a religion they claim to belong to."
 		},
 		{
+			"word": "heroic",
+			"phonetic": "/hɪˈɹəʊ.ɪk/",
+			"meaning": "A heroic verse."
+		},
+		{
+			"word": "hesitate",
+			"phonetic": "/ˈhɛzɪteɪt/",
+			"meaning": "To stop or pause respecting decision or action; to be in suspense or uncertainty as to a determination."
+		},
+		{
+			"word": "hilarious",
+			"phonetic": "/hɪˈlɛəɹiəs/",
+			"meaning": "Very funny; causing great merriment and laughter."
+		},
+		{
 			"word": "hindrance",
 			"meaning": "Something which hinders: something that holds back or causes problems with something else."
+		},
+		{
+			"word": "historic",
+			"phonetic": "/(h)ɪˈstɒɹɪk/",
+			"meaning": "A history, a non-fiction account of the past."
+		},
+		{
+			"word": "history",
+			"phonetic": "/ˈhɪst(ə)ɹi/",
+			"meaning": "The aggregate of past events."
+		},
+		{
+			"word": "horizontal",
+			"phonetic": "/ˌhɒɹɪˈzɒntəl/",
+			"meaning": "A horizontal component of a structure"
+		},
+		{
+			"word": "hostile",
+			"phonetic": "/ˈhɒstaɪl/",
+			"meaning": "(chiefly in the plural) An enemy."
+		},
+		{
+			"word": "huddle",
+			"phonetic": "/ˈhʌdəl/",
+			"meaning": "A dense and disorderly crowd."
 		},
 		{
 			"word": "hypocrisy",
@@ -1065,9 +1664,24 @@
 			"meaning": "One who destroys religious images or icons, especially an opponent of the Orthodox Church in the 8th and 9th centuries, or a Puritan during the European Reformation."
 		},
 		{
+			"word": "identify",
+			"phonetic": "/aɪˈdɛn.tɪ.faɪ/",
+			"meaning": "To establish the identity of someone or something."
+		},
+		{
+			"word": "illegible",
+			"phonetic": "/ɪˈlɛd͡ʒəbəl/",
+			"meaning": "Not clear enough to be read; unreadable; not legible or decipherable."
+		},
+		{
 			"word": "illicit",
 			"phonetic": "/ɪˈlɪsɪt/",
 			"meaning": "A banned or unlawful item."
+		},
+		{
+			"word": "immigrate",
+			"phonetic": "/ˈɪmɪɡɹeɪt/",
+			"meaning": "To move into a foreign country to stay permanently."
 		},
 		{
 			"word": "imminent",
@@ -1093,7 +1707,10 @@
 			"phonetic": "/imˈpɛtʃuəs/",
 			"meaning": "Making arbitrary decisions, especially in an impulsive and forceful manner."
 		},
-		{ "word": "implausible", "meaning": "Not plausible; unlikely; dubious." },
+		{
+			"word": "implausible",
+			"meaning": "Not plausible; unlikely; dubious."
+		},
 		{
 			"word": "implication",
 			"phonetic": "/ˌɪmpləˈkeɪʃən/",
@@ -1129,7 +1746,10 @@
 			"phonetic": "/ɪnˈsaɪt/",
 			"meaning": "To stir up or excite; to rouse or goad into action."
 		},
-		{ "word": "incoherent", "meaning": "Not coherent." },
+		{
+			"word": "incoherent",
+			"meaning": "Not coherent."
+		},
 		{
 			"word": "incompatible",
 			"phonetic": "/ˌɪŋkəmˈpætɪbəl/",
@@ -1145,11 +1765,19 @@
 			"phonetic": "/ɪnˌkɑnsəˈkwɛnʃəl/",
 			"meaning": "Something unimportant; something that does not matter."
 		},
-		{ "word": "incorrigible", "meaning": "An incorrigibly bad individual." },
+		{
+			"word": "incorrigible",
+			"meaning": "An incorrigibly bad individual."
+		},
 		{
 			"word": "indict",
 			"phonetic": "/ˌɪnˈdaɪt/",
 			"meaning": "To accuse of wrongdoing; charge."
+		},
+		{
+			"word": "indifferent",
+			"phonetic": "/ɪnˈdɪf.ə.ɹənt/",
+			"meaning": "A person who is indifferent or apathetic."
 		},
 		{
 			"word": "indigenous",
@@ -1170,6 +1798,11 @@
 			"meaning": "Habitually lazy, procrastinating, or resistant to physical labor"
 		},
 		{
+			"word": "industrious",
+			"phonetic": "/ɪnˈdʌstɹi.əs/",
+			"meaning": "Hard-working and persistent."
+		},
+		{
 			"word": "inevitable",
 			"phonetic": "/ɪnˈɛvɪtəbəl/",
 			"meaning": "Something that is predictable, necessary, or cannot be avoided."
@@ -1180,9 +1813,19 @@
 			"meaning": "Having a bad reputation, disreputable; notoriously bad, unpleasant or evil; widely known, especially for something bad."
 		},
 		{
+			"word": "influence",
+			"phonetic": "/ˈɪn.flu.əns/",
+			"meaning": "The power to affect, control or manipulate something or someone; the ability to change the development of fluctuating things such as conduct, thoughts or decisions."
+		},
+		{
 			"word": "infuriate",
 			"phonetic": "/ɪnˈfjʊəɹieɪt/",
 			"meaning": "To make furious or mad with anger; to fill with fury."
+		},
+		{
+			"word": "inhabitants",
+			"phonetic": "/ɪnˈhæbɪtənts/",
+			"meaning": "Someone or thing who lives in a place."
 		},
 		{
 			"word": "inherent",
@@ -1190,9 +1833,18 @@
 			"meaning": "Naturally as part or consequence of something."
 		},
 		{
+			"word": "initiate",
+			"meaning": "A new member of an organization."
+		},
+		{
 			"word": "innovation",
 			"phonetic": "/ˌɪnəˈveɪʃən/",
 			"meaning": "The act of innovating; the introduction of something new, in customs, rites, etc."
+		},
+		{
+			"word": "insists",
+			"phonetic": "/ɪnˈsɪsts/",
+			"meaning": "(with on or upon or (that + ordinary verb form)) To hold up a claim emphatically."
 		},
 		{
 			"word": "inspire",
@@ -1247,8 +1899,33 @@
 			"phonetic": "/ɪnˈtjuːɪtɪv/",
 			"meaning": "One who has (especially parapsychological) intuition."
 		},
-		{ "word": "isolate", "meaning": "Something that has been isolated." },
-		{ "word": "jeopardize", "meaning": "To put in jeopardy, to threaten." },
+		{
+			"word": "investigate",
+			"phonetic": "[ɪn.ˈves.tɪ.ɡeɪ̯t]",
+			"meaning": "To inquire into or study in order to ascertain facts or information."
+		},
+		{
+			"word": "irate",
+			"phonetic": "/aɪˈɹeɪt/",
+			"meaning": "Extremely angry; wrathful; enraged."
+		},
+		{
+			"word": "irrelevant",
+			"meaning": "Not related, not applicable, unimportant, not connected."
+		},
+		{
+			"word": "irrigate",
+			"phonetic": "/ˈɪɹəˌɡeɪt/",
+			"meaning": "To supply (farmland) with water, by building ditches, pipes, etc."
+		},
+		{
+			"word": "isolate",
+			"meaning": "Something that has been isolated."
+		},
+		{
+			"word": "jeopardize",
+			"meaning": "To put in jeopardy, to threaten."
+		},
 		{
 			"word": "jubilation",
 			"meaning": "A triumphant shouting; rejoicing; exultation."
@@ -1268,7 +1945,23 @@
 			"phonetic": "/ˈlævɪʃ/",
 			"meaning": "To give out extremely generously; to squander."
 		},
-		{ "word": "lax", "meaning": "A salmon." },
+		{
+			"word": "lax",
+			"meaning": "A salmon."
+		},
+		{
+			"word": "legendary",
+			"meaning": "A collection of legends, in particular of lives of saints."
+		},
+		{
+			"word": "liaison",
+			"meaning": "Communication between two parties or groups."
+		},
+		{
+			"word": "libel",
+			"phonetic": "/ˈlaɪbəl/",
+			"meaning": "A written or pictorial false statement which unjustly seeks to damage someone's reputation."
+		},
 		{
 			"word": "listless",
 			"phonetic": "/ˈlɪstləs/",
@@ -1280,17 +1973,43 @@
 			"meaning": "A person who is paid to lobby politicians and encourage them to vote a certain way or otherwise use their office to effect a desired result."
 		},
 		{
+			"word": "lofty",
+			"phonetic": "/ˈlɑfti/",
+			"meaning": "High, tall, having great height or stature"
+		},
+		{
 			"word": "longevity",
 			"phonetic": "/lɒnˈdʒɛ.vɪ.ti/",
 			"meaning": "The quality of being long-lasting, especially of life."
 		},
-		{ "word": "lucrative", "meaning": "Producing a surplus; profitable." },
+		{
+			"word": "lucrative",
+			"meaning": "Producing a surplus; profitable."
+		},
+		{
+			"word": "ludicrous",
+			"meaning": "Idiotic or unthinkable, often to the point of being funny."
+		},
 		{
 			"word": "mandatory",
 			"phonetic": "/ˈmæn.də.t(ə)ɹi/",
 			"meaning": "A sign or line that require the path of the disc to be above, below or to one side of it."
 		},
-		{ "word": "meager", "phonetic": "/ˈmiːɡə/", "meaning": "To make lean." },
+		{
+			"word": "manipulate",
+			"phonetic": "/məˈnɪpjʊleɪt/",
+			"meaning": "To move, arrange or operate something using the hands"
+		},
+		{
+			"word": "massive",
+			"phonetic": "/ˈmæs.ɪv/",
+			"meaning": "A homogeneous mass of rock, not layered and without an obvious crystal structure."
+		},
+		{
+			"word": "meager",
+			"phonetic": "/ˈmiːɡə/",
+			"meaning": "To make lean."
+		},
 		{
 			"word": "meander",
 			"phonetic": "/miˈændə(ɹ)/",
@@ -1309,6 +2028,11 @@
 		{
 			"word": "meticulous",
 			"meaning": "Characterized by very precise, conscientious attention to details."
+		},
+		{
+			"word": "mitigate",
+			"phonetic": "/ˈmɪt.ɪ.ɡeɪt/",
+			"meaning": "To reduce, lessen, or decrease; to make less severe or easier to bear."
 		},
 		{
 			"word": "modify",
@@ -1330,9 +2054,24 @@
 			"meaning": "An organized rebellion against a legally constituted authority, especially by seamen against their officers."
 		},
 		{
+			"word": "naive",
+			"phonetic": "/naɪˈiːv/",
+			"meaning": "A naive person; a greenhorn."
+		},
+		{
 			"word": "narrate",
 			"phonetic": "/nəˈɹeɪt/",
 			"meaning": "To relate (a story or series of events) in speech or writing."
+		},
+		{
+			"word": "navigate",
+			"phonetic": "/ˈnæv.ɪ.ɡeɪt/",
+			"meaning": "To plan, control and record the position and course of a vehicle, ship, aircraft, etc., on a journey; to follow a planned course."
+		},
+		{
+			"word": "necessity",
+			"phonetic": "/nɪˈsɛsəti/",
+			"meaning": "The quality or state of being necessary, unavoidable, or absolutely requisite."
 		},
 		{
 			"word": "negligent",
@@ -1344,11 +2083,19 @@
 			"phonetic": "/niːʃ/",
 			"meaning": "A cavity, hollow, or recess, generally within the thickness of a wall, for a statue, bust, or other erect ornament. Hence, any similar position, literal or figurative."
 		},
-		{ "word": "nonchalant", "meaning": "Casually calm and relaxed." },
+		{
+			"word": "nonchalant",
+			"meaning": "Casually calm and relaxed."
+		},
 		{
 			"word": "novice",
 			"phonetic": "/ˈnɒvɪs/",
 			"meaning": "A beginner; one who is not very familiar or experienced in a particular subject."
+		},
+		{
+			"word": "obedient",
+			"phonetic": "/əʊˈbiːdɪənt/",
+			"meaning": "One who obeys."
 		},
 		{
 			"word": "obliterate",
@@ -1361,6 +2108,11 @@
 			"meaning": "(usually followed by to or of) Lacking awareness; unmindful; unaware, unconscious of."
 		},
 		{
+			"word": "obnoxious",
+			"phonetic": "/əbˈnɒkʃəs/",
+			"meaning": "Extremely unpleasant or offensive; very annoying, odious or contemptible."
+		},
+		{
 			"word": "obscure",
 			"phonetic": "/əbˈskjɔː(ɹ)/",
 			"meaning": "To render obscure; to darken; to make dim; to keep in the dark; to hide; to make less visible, intelligible, legible, glorious, beautiful, or illustrious."
@@ -1371,20 +2123,38 @@
 			"meaning": "(of words, equipment, etc.) No longer in use; gone into disuse; disused or neglected (often by preference for something newer, which replaces the subject)."
 		},
 		{
+			"word": "omit",
+			"phonetic": "/oʊˈmɪt/",
+			"meaning": "To leave out or exclude."
+		},
+		{
 			"word": "omnipotent",
 			"phonetic": "/ɒmˈnɪpətənt/",
 			"meaning": "An omnipotent being."
 		},
-		{ "word": "opportune", "meaning": "Suitable for some particular purpose." },
+		{
+			"word": "opportune",
+			"meaning": "Suitable for some particular purpose."
+		},
 		{
 			"word": "oppose",
 			"phonetic": "/əˈpəʊz/",
 			"meaning": "To attempt to stop the progression of; to resist or antagonize by physical means, or by arguments, etc.; to contend against."
 		},
 		{
+			"word": "opposed",
+			"phonetic": "/əˈpəʊzd/",
+			"meaning": "To attempt to stop the progression of; to resist or antagonize by physical means, or by arguments, etc.; to contend against."
+		},
+		{
 			"word": "opposition",
 			"phonetic": "/ɒpəˈzɪʃən/",
 			"meaning": "The action of opposing or of being in conflict."
+		},
+		{
+			"word": "oppress",
+			"phonetic": "/əˈpɹɛs/",
+			"meaning": "To keep down by unjust force."
 		},
 		{
 			"word": "opulent",
@@ -1394,6 +2164,15 @@
 			"word": "orator",
 			"phonetic": "/ˈɒ.ɹə.tə(ɹ)/",
 			"meaning": "Someone who orates or delivers an oration."
+		},
+		{
+			"word": "ordinary",
+			"meaning": "A person with authority; authority, ordinance."
+		},
+		{
+			"word": "origin",
+			"phonetic": "/ˈɒɹ.ə.dʒən/",
+			"meaning": "The beginning of something."
 		},
 		{
 			"word": "ostentatious",
@@ -1414,6 +2193,21 @@
 			"word": "parched",
 			"phonetic": "/pɑːtʃt/",
 			"meaning": "To burn the surface of, to scorch."
+		},
+		{
+			"word": "passage",
+			"phonetic": "/ˈpæsɪd͡ʒ/",
+			"meaning": "A paragraph or section of text or music with particular meaning."
+		},
+		{
+			"word": "peculiar",
+			"phonetic": "[pʰə̥ˈkʰj̊uːljʊə]",
+			"meaning": "That which is peculiar; a sole or exclusive property; a prerogative; a characteristic."
+		},
+		{
+			"word": "perceive",
+			"phonetic": "/pəˈsiːv/",
+			"meaning": "To become aware of, through the physical senses or by thinking; to see; to understand."
 		},
 		{
 			"word": "perception",
@@ -1440,7 +2234,15 @@
 			"phonetic": "/pɚˈspɛktɪv/",
 			"meaning": "A view, vista or outlook."
 		},
-		{ "word": "persuasive", "meaning": "That which persuades; incitement." },
+		{
+			"word": "persuade",
+			"phonetic": "/pəˈsweɪd/",
+			"meaning": "To successfully convince (someone) to agree to, accept, or do something, usually through reasoning and verbal influence."
+		},
+		{
+			"word": "persuasive",
+			"meaning": "That which persuades; incitement."
+		},
 		{
 			"word": "pertinent",
 			"phonetic": "/ˈpəːtɪnənt/",
@@ -1510,6 +2312,16 @@
 			"meaning": "Widespread or preferred."
 		},
 		{
+			"word": "primary",
+			"phonetic": "/ˈpɹɒeməɹi/",
+			"meaning": "A primary election; a preliminary election to select a political candidate of a political party."
+		},
+		{
+			"word": "priority",
+			"phonetic": "/pɹaɪˈɒɹɨti/",
+			"meaning": "An item's relative importance."
+		},
+		{
 			"word": "procedure",
 			"phonetic": "/pɹəˈsiːdʒə/",
 			"meaning": "A particular method for performing a task."
@@ -1527,6 +2339,11 @@
 			"word": "profound",
 			"phonetic": "/pɹəˈfaʊnd/",
 			"meaning": "The deep; the sea; the ocean."
+		},
+		{
+			"word": "prominent",
+			"phonetic": "/ˈpɹɒmɪnənt/",
+			"meaning": "Standing out, or projecting; jutting; protuberant"
 		},
 		{
 			"word": "propensity",
@@ -1547,6 +2364,11 @@
 			"word": "prosaic",
 			"phonetic": "/pɹəʊˈzeɪ.ɪk/",
 			"meaning": "Pertaining to or having the characteristics of prose."
+		},
+		{
+			"word": "prospective",
+			"phonetic": "/pɹəˈspɛktɪv/",
+			"meaning": "The scene before or around, in time or in space; view; prospect."
 		},
 		{
 			"word": "prosperity",
@@ -1571,6 +2393,11 @@
 		{
 			"word": "pseudonym",
 			"meaning": "A fictitious name, as those used by writers and movie stars."
+		},
+		{
+			"word": "punctual",
+			"phonetic": "/ˈpʌŋktjʊəl/",
+			"meaning": "Prompt; on time."
 		},
 		{
 			"word": "punitive",
@@ -1613,6 +2440,11 @@
 			"meaning": "An explanation of the basis or fundamental reasons for something."
 		},
 		{
+			"word": "realistic",
+			"phonetic": "/ˌɹiːjəˈlɪstɪk/",
+			"meaning": "Expressed or represented as being accurate, practicable, or not idealistic."
+		},
+		{
 			"word": "rebel",
 			"phonetic": "/ˈɹɛbəl/",
 			"meaning": "A person who resists an established authority, often violently"
@@ -1633,6 +2465,11 @@
 			"meaning": "A person who is recalcitrant."
 		},
 		{
+			"word": "recently",
+			"phonetic": "/ˈɹiːsəntli/",
+			"meaning": "In the recent past"
+		},
+		{
 			"word": "reclusive",
 			"phonetic": "/ɹɪˈkluːsɪv/",
 			"meaning": "Of, characterized by, or preferring privacy and isolation; secluded."
@@ -1646,6 +2483,10 @@
 			"word": "reconciliation",
 			"phonetic": "/ˌɹɛkənˌsɪliˈeɪʃən/",
 			"meaning": "The reestablishment of friendly relations; conciliation or rapprochement."
+		},
+		{
+			"word": "recount",
+			"meaning": "Narration, account, description, rendering"
 		},
 		{
 			"word": "rectify",
@@ -1667,8 +2508,24 @@
 			"phonetic": "/ɹɪˈdʌn.dənt/",
 			"meaning": "Superfluous; exceeding what is necessary."
 		},
-		{ "word": "rejuvenate", "meaning": "To render young again." },
-		{ "word": "relegate", "meaning": "Exile, banish, remove, or send away." },
+		{
+			"word": "reference",
+			"phonetic": "/ˈɹɛf.(ə)ɹəns/",
+			"meaning": "A relationship or relation (to something)."
+		},
+		{
+			"word": "reinforce",
+			"phonetic": "/ˌɹiːɪnˈfɔː(ɹ)s/",
+			"meaning": "To strengthen, especially by addition or augmentation."
+		},
+		{
+			"word": "rejuvenate",
+			"meaning": "To render young again."
+		},
+		{
+			"word": "relegate",
+			"meaning": "Exile, banish, remove, or send away."
+		},
 		{
 			"word": "relinquish",
 			"phonetic": "[ɹɪˈlɪŋkwɪʃ]",
@@ -1677,6 +2534,11 @@
 		{
 			"word": "renovation",
 			"meaning": "An act, or the process, of renovating."
+		},
+		{
+			"word": "repetition",
+			"phonetic": "/ɹɛpəˈtɪʃən/",
+			"meaning": "The act or an instance of repeating or being repeated."
 		},
 		{
 			"word": "repugnant",
@@ -1698,6 +2560,11 @@
 			"meaning": "A strong will, determination."
 		},
 		{
+			"word": "resolve",
+			"phonetic": "/ɹiːˈzɒlv/",
+			"meaning": "Determination; will power."
+		},
+		{
 			"word": "respective",
 			"phonetic": "/ɹɪˈspɛktɪv/",
 			"meaning": "Relating to particular persons or things, each to each; particular; own."
@@ -1707,11 +2574,19 @@
 			"phonetic": "/ɹɪˈspɒns/",
 			"meaning": "An answer or reply, or something in the nature of an answer or reply."
 		},
-		{ "word": "restrained", "meaning": "To control or keep in check." },
+		{
+			"word": "restrained",
+			"meaning": "To control or keep in check."
+		},
 		{
 			"word": "retaliate",
 			"phonetic": "/ɹɪˈtæli.eɪt/",
 			"meaning": "To do something harmful or negative to get revenge for some harm; to fight back or respond in kind to an injury or affront."
+		},
+		{
+			"word": "retrieve",
+			"phonetic": "/ɹiˈtɹiv/",
+			"meaning": "A retrieval"
 		},
 		{
 			"word": "retrospect",
@@ -1729,9 +2604,24 @@
 			"meaning": "Veneration; profound awe and respect, normally in a sacred context."
 		},
 		{
+			"word": "review",
+			"phonetic": "/ɹɪˈvjuː/",
+			"meaning": "A second or subsequent reading of a text or artifact in an attempt to gain new insights."
+		},
+		{
+			"word": "revolt",
+			"phonetic": "/ɹɪˈvɒlt/",
+			"meaning": "An act of revolt."
+		},
+		{
 			"word": "rigorous",
 			"phonetic": "/ˈɹɪɡəɹəs/",
 			"meaning": "Showing, causing, or favoring rigour; scrupulously accurate or strict; thorough."
+		},
+		{
+			"word": "rudimentary",
+			"phonetic": "/ˌɹuːdɪˈmɛntəɹi/",
+			"meaning": "(usually in the plural) One of the rudimentary mammae of boars."
 		},
 		{
 			"word": "sabotage",
@@ -1749,6 +2639,11 @@
 			"meaning": "An approval, by an authority, generally one that makes something valid."
 		},
 		{
+			"word": "scarce",
+			"phonetic": "/ˈskɛəs/",
+			"meaning": "Uncommon, rare; difficult to find; insufficient to meet a demand."
+		},
+		{
 			"word": "scrutinize",
 			"meaning": "To examine something with great care or detail, as to look for hidden or obscure flaws."
 		},
@@ -1761,6 +2656,11 @@
 			"word": "significant",
 			"phonetic": "/sɪɡˈnɪ.fɪ.kənt/",
 			"meaning": "That which has significance; a sign; a token; a symbol."
+		},
+		{
+			"word": "signify",
+			"phonetic": "/ˈsɪɡnɪfaɪ/",
+			"meaning": "To create a sign out of something."
 		},
 		{
 			"word": "similar",
@@ -1778,9 +2678,19 @@
 			"meaning": "Happening at the same moment."
 		},
 		{
+			"word": "solution",
+			"phonetic": "/səˈl(j)uːʃən/",
+			"meaning": "A homogeneous mixture, which may be liquid, gas or solid, formed by dissolving one or more substances."
+		},
+		{
 			"word": "source",
 			"phonetic": "/sɔːs/",
 			"meaning": "The person, place or thing from which something (information, goods, etc.) comes or is acquired."
+		},
+		{
+			"word": "sovereign",
+			"phonetic": "/ˈsɒv.ɹɪn/",
+			"meaning": "A monarch; the ruler of a country."
 		},
 		{
 			"word": "specific",
@@ -1813,6 +2723,11 @@
 			"meaning": "Interference on a broadcast signal caused by atmospheric disturbances; heard as crackles on radio, or seen as random specks on television."
 		},
 		{
+			"word": "strategy",
+			"phonetic": "/ˈstɹætədʒi/",
+			"meaning": "The science and art of military command as applied to the overall planning and conduct of warfare."
+		},
+		{
 			"word": "stringent",
 			"meaning": "Strict; binding strongly; making strict requirements; restrictive; rigid; severe"
 		},
@@ -1821,7 +2736,10 @@
 			"phonetic": "/səbˈmɪsɪv/",
 			"meaning": "(BDSM) One who submits to a dominant partner in sexual practices."
 		},
-		{ "word": "subordinate", "meaning": "One who is subordinate." },
+		{
+			"word": "subordinate",
+			"meaning": "One who is subordinate."
+		},
 		{
 			"word": "subsidize",
 			"phonetic": "/ˈsʌbsɪdaɪz/",
@@ -1831,6 +2749,11 @@
 			"word": "substantiate",
 			"phonetic": "/səbˈstanʃɪeɪt/",
 			"meaning": "To verify something by supplying evidence; to authenticate or corroborate"
+		},
+		{
+			"word": "substitute",
+			"phonetic": "/ˈsʌbstɪtjut/",
+			"meaning": "A replacement or stand-in for something that achieves a similar result or purpose."
 		},
 		{
 			"word": "subtle",
@@ -1843,6 +2766,11 @@
 			"meaning": "To yield to an overpowering force or overwhelming desire."
 		},
 		{
+			"word": "summarize",
+			"phonetic": "/ˈsʌməˌɹaɪz/",
+			"meaning": "To prepare a summary of (something)."
+		},
+		{
 			"word": "superficial",
 			"phonetic": "/ˌs(j)uːpəˈfɪʃəl/",
 			"meaning": "(chiefly in plural) A surface detail."
@@ -1850,6 +2778,11 @@
 		{
 			"word": "superfluous",
 			"meaning": "In excess of what is required or sufficient."
+		},
+		{
+			"word": "superior",
+			"phonetic": "/suːˈpɪəɹi.ə(ɹ)/",
+			"meaning": "A person of higher rank or quality."
 		},
 		{
 			"word": "suppress",
@@ -1866,8 +2799,18 @@
 			"meaning": "Stealthy, furtive, well hidden, covert (especially movements)."
 		},
 		{
+			"word": "suspense",
+			"phonetic": "/səˈspɛns/",
+			"meaning": "The condition of being suspended; cessation for a time."
+		},
+		{
 			"word": "tactful",
 			"meaning": "Possessing tact; able to deal with people in a sensitive manner."
+		},
+		{
+			"word": "talisman",
+			"phonetic": "/ˈtæl.ɪsˌmæn/",
+			"meaning": "A magical object providing protection against ill will, or the supernatural, or conferring the wearer with a boon such as good luck, good health, or power(s)."
 		},
 		{
 			"word": "tangible",
@@ -1885,6 +2828,16 @@
 			"meaning": "Clinging to an object or surface; adhesive."
 		},
 		{
+			"word": "tension",
+			"phonetic": "/ˈtɛnʃən/",
+			"meaning": "The condition of being held in a state between two or more forces, which are acting in opposition to each other."
+		},
+		{
+			"word": "tentative",
+			"phonetic": "/ˈtɛntətɪv/",
+			"meaning": "A trial; an experiment; an attempt."
+		},
+		{
 			"word": "tenuous",
 			"phonetic": "/ˈtɛn.ju.əs/",
 			"meaning": "Thin in substance or consistency."
@@ -1895,16 +2848,52 @@
 			"meaning": "A description of an event or system that is considered to be accurate."
 		},
 		{
+			"word": "thesis",
+			"phonetic": "/ˈθisɪs/",
+			"meaning": "Senses relating to logic, rhetoric, etc."
+		},
+		{
 			"word": "tirade",
 			"phonetic": "/ˈtaɪɹeɪd/",
 			"meaning": "A long, angry or violent speech; a diatribe."
 		},
-		{ "word": "transient", "meaning": "Something which is transient." },
-		{ "word": "traumatic", "meaning": "Of, caused by, or causing trauma." },
+		{
+			"word": "tolerate",
+			"phonetic": "/ˈtɒl.ə.ɹeɪt/",
+			"meaning": "To accept hardship without objection."
+		},
+		{
+			"word": "toxic",
+			"phonetic": "/ˈtɒk.sɪk/",
+			"meaning": "Having a chemical nature that is harmful to health or lethal if consumed or otherwise entering into the body in sufficient quantities."
+		},
+		{
+			"word": "transfer",
+			"phonetic": "/ˈtɹænzfɜː/",
+			"meaning": "The act of conveying or removing something from one place, person or thing to another."
+		},
+		{
+			"word": "transient",
+			"meaning": "Something which is transient."
+		},
+		{
+			"word": "traumatic",
+			"meaning": "Of, caused by, or causing trauma."
+		},
 		{
 			"word": "travesty",
 			"phonetic": "/ˈtɹæv.əs.ti/",
 			"meaning": "An absurd or grotesque misrepresentation."
+		},
+		{
+			"word": "treason",
+			"phonetic": "/ˈtɹiː.zən/",
+			"meaning": "The crime of betraying one’s own country."
+		},
+		{
+			"word": "tremble",
+			"phonetic": "/ˈtɹɛmbl̩/",
+			"meaning": "A shake, quiver, or vibration."
 		},
 		{
 			"word": "tumult",
@@ -1921,6 +2910,20 @@
 			"meaning": "A state of great disorder or uncertainty."
 		},
 		{
+			"word": "unanimous",
+			"meaning": "Based on unanimity, assent or agreement."
+		},
+		{
+			"word": "unexpected",
+			"phonetic": "/ʌnɪkˈspɛktɪd/",
+			"meaning": "Not expected, anticipated or foreseen."
+		},
+		{
+			"word": "unfamiliar",
+			"phonetic": "/ˌʌnfəˈmɪli.əɹ/",
+			"meaning": "An unfamiliar person; a stranger."
+		},
+		{
 			"word": "unilateral",
 			"phonetic": "[ˌjʉː.nɪˈlæt.ə.ɹɫ̩]",
 			"meaning": "Done by one side only."
@@ -1928,6 +2931,11 @@
 		{
 			"word": "unimpeachable",
 			"meaning": "Not able to be impeached or reproached."
+		},
+		{
+			"word": "unique",
+			"phonetic": "/juːˈniːk/",
+			"meaning": "A thing without a like; something unequalled or unparallelled."
 		},
 		{
 			"word": "universal",
@@ -1973,13 +2981,28 @@
 			"meaning": "To substantiate or prove the truth of something"
 		},
 		{
+			"word": "vertical",
+			"phonetic": "/ˈvɜːtɪkəl/",
+			"meaning": "A vertex or zenith."
+		},
+		{
 			"word": "viable",
 			"phonetic": "/ˈvaɪəbəl/",
 			"meaning": "An organism that is able to live and develop."
 		},
 		{
+			"word": "viewpoint",
+			"phonetic": "/ˈvjuː.pɔɪnt/",
+			"meaning": "The position from which something is observed or considered; an angle, outlook or point of view."
+		},
+		{
 			"word": "vindicate",
 			"meaning": "To clear of an accusation, suspicion or criticism."
+		},
+		{
+			"word": "violate",
+			"phonetic": "/ˈvaɪəˌleɪt/",
+			"meaning": "To break or disregard (a rule or convention)."
 		},
 		{
 			"word": "vulnerable",
