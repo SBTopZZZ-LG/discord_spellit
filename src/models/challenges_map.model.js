@@ -125,7 +125,7 @@ class Challenge {
     this.startedBy = startedBy;
     this.startedByAvatarUrl = startedByAvatarUrl;
     this.durationPerRound = durationPerRound;
-    this.roundsLeft = 1;
+    this.roundsLeft = roundsLeft;
     this.multipleGuesses = multipleGuesses;
 
     this.challengeMainLoop(client);
