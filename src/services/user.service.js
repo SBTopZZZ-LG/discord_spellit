@@ -31,6 +31,7 @@ class UserService {
     await DbUser.updateOne({ discord_id: user.id }, {
       $inc: { score },
       $set: {
+        name: user.username,
         title: parseTierTitle(oldScore + score),
       },
     });
