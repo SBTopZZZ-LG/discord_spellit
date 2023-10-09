@@ -58,7 +58,7 @@ client.once(Events.ClientReady, _ => {
     if (message.author.bot) return;
 
     const challenge = ChallengesMap.getGuildChallenge(message.guildId);
-    if (challenge !== null)
+    if (challenge !== undefined)
       challenge.processGuess(client, message);
   });
 });
