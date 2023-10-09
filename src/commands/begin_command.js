@@ -20,7 +20,6 @@ const instance =
       new SlashCommandStringOption()
         .setName("duration")
         .setDescription("Amount of time to wait before revealing the answer")
-        .setRequired(true)
         .addChoices(
           { name: "15 seconds", value: "t_15s" },
           { name: "30 seconds", value: "t_30s" },
@@ -34,7 +33,6 @@ const instance =
       new SlashCommandStringOption()
         .setName("rounds")
         .setDescription("Challenge rounds")
-        .setRequired(true)
         .addChoices(
           { name: "5 rounds", value: "r_5" },
           { name: "10 rounds", value: "r_10" },
@@ -52,8 +50,7 @@ const instance =
     .addBooleanOption(
       new SlashCommandBooleanOption()
         .setName("multiple_guesses")
-        .setDescription("Allow users to guess the spelling multiple times")
-        .setRequired(true),
+        .setDescription("Allow users to guess the spelling multiple times"),
     );
 
 // Middlewares
@@ -62,9 +59,9 @@ const instance =
  * @param {CommandInteraction} interaction
  */
 async function handler(interaction) {
-  const duration = duration1[interaction.options.get("duration").value];
-  const rounds = rounds1[interaction.options.get("rounds").value];
-  const multipleGuesses = interaction.options.get("multiple_guesses")?.value ?? true;
+  const duration = duration1[interaction.options.get("duration")?.value ?? "t_30s"];
+  const rounds = rounds1[interaction.options.get("rounds")?.value ?? "r_10"];
+  const multipleGuesses = interaction.options.get("multiple_guesses")?.value ?? false;
 
   const guildId = interaction.guildId;
   if (ChallengesMap.registerGuild(guildId, interaction.channelId)) {
