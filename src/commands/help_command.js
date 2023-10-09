@@ -30,6 +30,7 @@ async function handler(interaction) {
           { name: "`/help`", value: "Displays this exact message!" },
           { name: "`/begin`", value: `Starts the ${META.name} challenge!` },
           { name: "`/stop`", value: `Stops the ${META.name} challenge!` },
+          { name: "`/score`", value: `View your current score at ${META.name}!` },
         ),
     ],
   });
