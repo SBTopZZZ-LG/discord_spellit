@@ -85,16 +85,24 @@ async function handler(interaction) {
           ]),
       ],
     });
-    ChallengesMap
-      .getGuildChallenge(guildId)
-      .beginChallenge(
-        interaction.client,
-        interaction.user.username,
-        interaction.user.avatarURL({ size: 32 }),
-        duration,
-        rounds,
-        multipleGuesses,
-      );
+    
+    try {
+      ChallengesMap
+        .getGuildChallenge(guildId)
+        .beginChallenge(
+          interaction.client,
+          interaction.user.username,
+          interaction.user.avatarURL({ size: 32 }),
+          duration,
+          rounds,
+          multipleGuesses,
+        );
+    } catch (error) {
+      console.error(error);
+
+      ChallengesMap.getGuildChallenge(guildId)?.stopChallenge();
+      ChallengesMap.removeGuildChallenge(guildId);
+    }
   } else
     interaction.reply("The challenge is already started in this guild!");
 }
