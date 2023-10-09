@@ -150,7 +150,11 @@ class Challenge {
       for (const message of this.correctGuesses)
         if (!(message.author.id in authors)) {
           authors[message.author.id] = true;
-          message.react(parseEmoji('✅'));
+          try {
+            message.react(parseEmoji('✅'));
+          } catch (error) {
+            console.error(error);
+          }
 
           if (!(message.author.id in this.scores))
             this.scores[message.author.id] = 100;
@@ -271,17 +275,22 @@ class Challenge {
         clearInterval(messageUpdateInterval);
         return;
       }
+      if (!message.editable) return;
 
       const remaining = Math.floor((this.durationPerRound - (Date.now() - start)) / 1000);
-      message.edit({
-        embeds: [
-          new EmbedBuilder()
-            .setThumbnail(META.bannerImageUrl)
-            .setColor(META.color)
-            .setTitle(`Word #${this.words.length}`)
-            .setDescription(`Revealing the word in **${remaining} seconds**`),
-        ],
-      });
+      try {
+        message.edit({
+          embeds: [
+            new EmbedBuilder()
+              .setThumbnail(META.bannerImageUrl)
+              .setColor(META.color)
+              .setTitle(`Word #${this.words.length}`)
+              .setDescription(`Revealing the word in **${remaining} seconds**`),
+          ],
+        });
+      } catch (error) {
+        console.error(error);
+      }
     }, 1000);
 
     // Round duration
