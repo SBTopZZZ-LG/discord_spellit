@@ -6,8 +6,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"prestart": "node src/commands/_setup_commands.js",
-		"start": "node src/app.js",
-		"dev": "nodemon src/app.js"
+		"start": "env-cmd -f ./.env.production.local node src/app.js",
+		"dev": "env-cmd -f ./.env nodemon src/app.js"
 	},
 	"repository": {
 		"type": "git",
@@ -34,6 +34,7 @@
 		"cors": "^2.8.5",
 		"discord.js": "^14.13.0",
 		"dotenv": "^16.3.1",
+		"env-cmd": "^10.1.0",
 		"express": "^4.18.2",
 		"mongoose": "^7.5.4",
 		"node-gtts": "github:SBTopZZZ-LG/node-gtts-no-log"
