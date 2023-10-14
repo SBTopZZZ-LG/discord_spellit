@@ -182,8 +182,10 @@ class Challenge {
               description.length >= 1 ? description : "No one has scored any points yet!"
             )
             .setFields([
-              { name: "Phonetic", value: this.words[this.words.length - 1].phonetic ?? "N/a" },
+              { name: "Part of Speech", value: `_${this.words[this.words.length - 1].partOfSpeech}_`, inline: true },
+              { name: "Phonetic", value: this.words[this.words.length - 1].phonetic, inline: true },
               { name: "Meaning", value: this.words[this.words.length - 1].meaning },
+              { name: "Example", value: this.words[this.words.length - 1].example  }
             ]),
         ],
       });
@@ -252,17 +254,22 @@ class Challenge {
 
     // Push challenge message
     const channel = await client.channels.fetch(this.channelId);
+    const processedExample = word.example?.toLowerCase()?.split(word.word)?.join("\\_".repeat(word.word.length)) ?? "N/a";
     const message = await channel.send({
       embeds: [
         new EmbedBuilder()
           .setThumbnail(META.bannerImageUrl)
           .setColor(META.color)
           .setTitle(`Word #${this.words.length}`)
-          .setDescription(`Revealing the word in **${Math.floor(this.durationPerRound / 1000)} seconds**`),
+          .setFields(
+            { name: "Part of Speech", value: `_${word.partOfSpeech}_` },
+            { name: "Example", value: processedExample },
+            { name: "Revealing in", value: `**${Math.floor(this.durationPerRound / 1000)} seconds**` },
+          ),
       ],
       files: [
         new AttachmentBuilder()
-          .setName("Pronounciation.mp3")
+          .setName("Pronunciation.mp3")
           .setFile(await getBufferFromStream(gTTS.stream(word.word))),
       ],
     });
@@ -285,7 +292,11 @@ class Challenge {
               .setThumbnail(META.bannerImageUrl)
               .setColor(META.color)
               .setTitle(`Word #${this.words.length}`)
-              .setDescription(`Revealing the word in **${remaining} seconds**`),
+              .setFields(
+                { name: "Part of Speech", value: `_${word.partOfSpeech}_` },
+                { name: "Example", value: processedExample },
+                { name: "Revealing in", value: `**${remaining} seconds**` },
+              ),
           ],
         });
       } catch (error) {
