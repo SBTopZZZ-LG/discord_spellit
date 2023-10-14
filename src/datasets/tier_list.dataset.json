@@ -1,12 +1,14 @@
 {
-  "1000": "Novice",
-  "2500": "Apprentice",
-  "5000": "Journeyman",
-  "10000": "Adept",
-  "20000": "Expert",
-  "40000": "Master",
-  "80000": "Grandmaster",
-  "160000": "Legend",
-  "320000": "Mythic",
-  "9999999999": "Immortal"
+  "100": "Initiate",
+  "500": "Protégé",
+  "1000": "Cyberpilot",
+  "2000": "Nanotech Novice",
+  "4000": "Quantum Journeyman",
+  "6000": "Fusion Adept",
+  "10000": "Virtuoso",
+  "15000": "Singularity Master",
+  "22000": "Neural Grandmaster",
+  "30000": "Chrono Legend",
+  "40000": "Celestial Mythic",
+  "50000": "Immortal Avatar"
 }
