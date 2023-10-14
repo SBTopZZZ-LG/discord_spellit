@@ -7,6 +7,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"prestart": "node src/commands/_setup_commands.js",
 		"start": "env-cmd -f ./.env.production.local node src/app.js",
+		"no-env-cmd-start": "npm run prestart && node src/app.js",
 		"dev": "env-cmd -f ./.env nodemon src/app.js"
 	},
 	"repository": {
