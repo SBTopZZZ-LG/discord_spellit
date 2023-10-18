@@ -152,7 +152,7 @@ class Challenge {
         if (!(message.author.id in authors)) {
           authors[message.author.id] = true;
           try {
-            message.react(parseEmoji('✅'));
+            message.react("1164200557356007434");
           } catch (error) {
             console.error(error);
           }
