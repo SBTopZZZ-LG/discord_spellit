@@ -1,4 +1,4 @@
-# [Spell-iT](https://discord.com/api/oauth2/authorize?client_id=1159883355433746503&permissions=2147679296&scope=bot)
+# [Spell-iT](https://discord.com/api/oauth2/authorize?client_id=1159883355433746503&permissions=2147941440&scope=bot)
 
 Spell-iT is a sophisticated but very interactive Discord bot which provides users with Spelling challenges and track scores.
 
