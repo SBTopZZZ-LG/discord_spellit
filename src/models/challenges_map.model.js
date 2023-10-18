@@ -10,6 +10,7 @@ const gTTS = require("node-gtts")("en-us");
 const assert = require("assert");
 const { getBufferFromStream } = require("../utils/stream2buf.util");
 const { sleep } = require("../utils/sleep.util");
+const { processExample } = require("../utils/example_formatter.util");
 const { UserService } = require("../services/user.service");
 const { META } = require("../configs/discord_bot.config.json");
 const words = require("../datasets/dictionary.dataset.json").data;
@@ -163,17 +164,19 @@ class Challenge {
         }
 
       // Send post-round message
+      const word = this.words[this.words.length - 1];
       const description = Object.keys(this.scores)
         .sort((left, right) => this.scores[right] - this.scores[left])
         .map((userId, index) => `**#${index + 1}** <@${userId}> ▶️ +${this.scores[userId]}`)
         .join("\n");
+      const revealedExample = processExample(word.example?.toLowerCase()?.trim() ?? "N/a", word.word, false);
       const channel = await client.channels.fetch(this.channelId);
       channel.send({
         embeds: [
           new EmbedBuilder()
             .setThumbnail(META.bannerImageUrl)
             .setColor(META.color)
-            .setTitle(`The word was "${this.words[this.words.length - 1].word}".`)
+            .setTitle(`The word was "${word.word}".`)
             .setAuthor({
               name: `Started by ${this.startedBy}`,
               iconURL: this.startedByAvatarUrl,
@@ -182,10 +185,10 @@ class Challenge {
               description.length >= 1 ? description : "No one has scored any points yet!"
             )
             .setFields([
-              { name: "Part of Speech", value: `_${this.words[this.words.length - 1].partOfSpeech}_`, inline: true },
-              { name: "Phonetic", value: this.words[this.words.length - 1].phonetic, inline: true },
-              { name: "Meaning", value: this.words[this.words.length - 1].meaning },
-              { name: "Example", value: this.words[this.words.length - 1].example  }
+              { name: "Part of Speech", value: `_${word.partOfSpeech}_`, inline: true },
+              { name: "Phonetic", value: word.phonetic, inline: true },
+              { name: "Meaning", value: word.meaning },
+              { name: "Example", value: revealedExample  }
             ]),
         ],
       });
@@ -254,7 +257,7 @@ class Challenge {
 
     // Push challenge message
     const channel = await client.channels.fetch(this.channelId);
-    const processedExample = word.example?.toLowerCase()?.split(word.word)?.join("\\_".repeat(word.word.length)) ?? "N/a";
+    const processedExample = processExample(word.example?.toLowerCase()?.trim(), word.word);
     const message = await channel.send({
       embeds: [
         new EmbedBuilder()
