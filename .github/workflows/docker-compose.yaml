@@ -32,8 +32,7 @@ jobs:
 
       - name: Login to Amazon ECR
         id: login-ecr
-        run: |
-          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.ECR_REPOSITORY }}'].repositoryUri" --output text)
+        uses: aws-actions/amazon-ecr-login@v2
 
       - name: Build and Tag Docker Image
         run: |
