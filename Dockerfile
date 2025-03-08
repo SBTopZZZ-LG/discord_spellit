@@ -8,7 +8,8 @@ RUN npm install --production
 
 COPY . .
 
-# RUN echo "DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN" > .env.production.local \
-#   && echo "DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET" >> .env.production.local
+RUN echo "DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN" > .env.production.local \
+  && echo "DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET" >> .env.production.local \
+  && echo "MONGODB_URI=$MONGODB_URI" >> .env.production.local
 
 CMD ["npm", "start"]
