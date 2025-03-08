@@ -3,12 +3,12 @@ name: Deploy
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 env:
   AWS_REGION: ${{ vars.AWS_REGION }}
   AWS_OIDC_ROLE_ARN: ${{ vars.AWS_OIDC_ROLE_ARN }}
   AWS_ECR_NAME: ${{ vars.AWS_ECR_NAME }}
-  IMAGE_TAG: ${{ github.run_number }}
 
 permissions:
   id-token: write
@@ -34,12 +34,16 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Build and Tag Docker Image
+      - name: Get ECR Repository URI
+        id: get-ecr-uri
         run: |
           ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.AWS_ECR_NAME }}'].repositoryUri" --output text)
-          docker build -t $ECR_URI:${{ env.IMAGE_TAG }} .
+          echo "ECR_URI=$ECR_URI" >> $GITHUB_ENV
+
+      - name: Build and Tag Docker Image
+        run: |
+          docker build -t $ECR_URI:latest .
 
       - name: Push Docker Image to ECR
         run: |
-          ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.AWS_ECR_NAME }}'].repositoryUri" --output text)
-          docker push $ECR_URI:${{ env.IMAGE_TAG }}
+          docker push $ECR_URI:latest
