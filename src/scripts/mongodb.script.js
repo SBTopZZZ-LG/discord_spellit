@@ -4,11 +4,6 @@ const mongoose = require("mongoose");
 // Constants
 const { MONGODB_URI } = process.env;
 
-console.log(process.env);
-console.log(process.env.DISCORD_BOT_TOKEN);
-console.log(process.env.DISCORD_CLIENT_SECRET);
-console.log(process.env.MONGODB_URI);
-
 // Middlewares
 
 mongoose.connection.on("error", (error) =>
