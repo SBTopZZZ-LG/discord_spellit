@@ -42,15 +42,16 @@ jobs:
           ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.AWS_ECR_NAME }}'].repositoryUri" --output text)
           echo "ECR_URI=$ECR_URI" >> $GITHUB_ENV
 
-      - name: Create .env File
+      - name: Create .env.production.local File
         run: |
-          echo "DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN" >> .env
-          echo "DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET" >> .env
+          echo "DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN" >> .env.production.local
+          echo "DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET" >> .env.production.local
         shell: bash
 
-      - name: Build and Tag Docker Image
+      - name: Build and Tag Docker Image with Docker Compose
         run: |
-          docker build --build-arg ENV_FILE=.env -t $ECR_URI:latest .
+          docker-compose build
+          docker tag $(docker-compose images -q) $ECR_URI:latest
 
       - name: Push Docker Image to ECR
         run: |
