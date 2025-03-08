@@ -9,6 +9,8 @@ env:
   AWS_REGION: ${{ vars.AWS_REGION }}
   AWS_OIDC_ROLE_ARN: ${{ vars.AWS_OIDC_ROLE_ARN }}
   AWS_ECR_NAME: ${{ vars.AWS_ECR_NAME }}
+  DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+  DISCORD_CLIENT_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
 
 permissions:
   id-token: write
@@ -40,9 +42,15 @@ jobs:
           ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.AWS_ECR_NAME }}'].repositoryUri" --output text)
           echo "ECR_URI=$ECR_URI" >> $GITHUB_ENV
 
+      - name: Create .env File
+        run: |
+          echo "DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN" >> .env
+          echo "DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET" >> .env
+        shell: bash
+
       - name: Build and Tag Docker Image
         run: |
-          docker build -t $ECR_URI:latest .
+          docker build --build-arg ENV_FILE=.env -t $ECR_URI:latest .
 
       - name: Push Docker Image to ECR
         run: |
