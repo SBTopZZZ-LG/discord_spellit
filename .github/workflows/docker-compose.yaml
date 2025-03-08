@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: ${{ vars.AWS_REGION }}
   AWS_OIDC_ROLE_ARN: ${{ vars.AWS_OIDC_ROLE_ARN }}
-  ECR_REPOSITORY: ${{ vars.AWS_ECR_DEPLOY_URI }}
+  AWS_ECR_NAME: ${{ vars.AWS_ECR_NAME }}
   IMAGE_TAG: ${{ github.run_number }}
 
 permissions:
@@ -36,10 +36,10 @@ jobs:
 
       - name: Build and Tag Docker Image
         run: |
-          ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.ECR_REPOSITORY }}'].repositoryUri" --output text)
+          ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.AWS_ECR_NAME }}'].repositoryUri" --output text)
           docker build -t $ECR_URI:${{ env.IMAGE_TAG }} .
 
       - name: Push Docker Image to ECR
         run: |
-          ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.ECR_REPOSITORY }}'].repositoryUri" --output text)
+          ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.AWS_ECR_NAME }}'].repositoryUri" --output text)
           docker push $ECR_URI:${{ env.IMAGE_TAG }}
