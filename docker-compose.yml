@@ -1,0 +1,30 @@
+services:
+  bot:
+    container_name: spellit-bot
+    build: .
+    restart: unless-stopped
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/d_spellit
+    depends_on:
+      - mongo
+    volumes:
+      - .:/app
+    networks:
+      - spellit_botnet
+
+  mongo:
+    image: mongo:6
+    container_name: discord-bot-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: d_spellit
+    volumes:
+      - mongodata:/data/db
+    networks:
+      - spellit_botnet
+
+networks:
+  spellit_botnet:
+
+volumes:
+  mongodata:
