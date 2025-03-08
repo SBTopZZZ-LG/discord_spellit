@@ -4,7 +4,7 @@ services:
     build: .
     restart: unless-stopped
     environment:
-      - MONGO_URI=mongodb://mongo:27017/d_spellit
+      - MONGODB_URI=mongodb://mongo:27017/d_spellit
     depends_on:
       - mongo
     volumes:
