@@ -51,7 +51,8 @@ jobs:
       - name: Build and Tag Docker Image with Docker Compose
         run: |
           docker compose build
-          docker tag $(docker compose images -q) $ECR_URI:latest
+          IMAGE_ID=$(docker compose images -q)
+          docker tag $IMAGE_ID $ECR_URI:latest
 
       - name: Push Docker Image to ECR
         run: |
