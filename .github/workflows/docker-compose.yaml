@@ -1,0 +1,46 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+env:
+  AWS_REGION: ${{ vars.AWS_REGION }}
+  AWS_OIDC_ROLE_ARN: ${{ vars.AWS_OIDC_ROLE_ARN }}
+  ECR_REPOSITORY: ${{ vars.AWS_ECR_DEPLOY_URI }}
+  IMAGE_TAG: ${{ github.run_number }}
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    name: Build & Push to ECR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.AWS_OIDC_ROLE_ARN }}
+          role-session-name: GitHubActions
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        run: |
+          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.ECR_REPOSITORY }}'].repositoryUri" --output text)
+
+      - name: Build and Tag Docker Image
+        run: |
+          ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.ECR_REPOSITORY }}'].repositoryUri" --output text)
+          docker build -t $ECR_URI:${{ env.IMAGE_TAG }} .
+
+      - name: Push Docker Image to ECR
+        run: |
+          ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.ECR_REPOSITORY }}'].repositoryUri" --output text)
+          docker push $ECR_URI:${{ env.IMAGE_TAG }}
