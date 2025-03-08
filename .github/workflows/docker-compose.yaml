@@ -42,10 +42,10 @@ jobs:
           ECR_URI=$(aws ecr describe-repositories --region $AWS_REGION --query "repositories[?repositoryName=='${{ env.AWS_ECR_NAME }}'].repositoryUri" --output text)
           echo "ECR_URI=$ECR_URI" >> $GITHUB_ENV
 
-      - name: Create .env.production.local File
+      - name: Create .env File
         run: |
-          echo "DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN" >> .env.production.local
-          echo "DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET" >> .env.production.local
+          echo "DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN" >> .env
+          echo "DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET" >> .env
         shell: bash
 
       - name: Build and Tag Docker Image
