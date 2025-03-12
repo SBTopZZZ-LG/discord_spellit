@@ -382,12 +382,15 @@ class Challenge {
 	 * @param {number} roundStartTime
 	 * @param {number} roundEndTime
 	 * @param {number} timestamp
+	 * @returns {number}
 	 */
 	calculateScoreDelta(roundStartTime, roundEndTime, timestamp) {
 		const duration = roundEndTime - roundStartTime;
 		const elapsedTimeUntilAnswer = timestamp - roundStartTime;
 		const bias = elapsedTimeUntilAnswer / duration;
-		const scoreDelta = Math.max(this.MIN_SCORE, bias * this.MAX_SCORE);
+		const scoreDelta = Math.ceil(
+			Math.max(this.MIN_SCORE, bias * this.MAX_SCORE)
+		);
 
 		return scoreDelta;
 	}
