@@ -2,20 +2,20 @@
 const tierList = require("../datasets/tier_list.dataset.json");
 
 // Constants
-const keys = Object.keys(tierList).map(key => parseInt(key, 10)).sort((left, right) => left - right);
+const keys = Object.keys(tierList)
+	.map((key) => parseInt(key, 10))
+	.sort((left, right) => left - right);
 
 // Middleware
 
 /**
- * @param {number} score 
+ * @param {number} score
  */
 function parseTierTitle(score) {
-  for (const key of keys)
-    if (score < key)
-      return tierList[String(key)];
-  return "";
+	for (const key of keys) if (score < key) return tierList[String(key)];
+	return "";
 }
 
 module.exports = {
-  parseTierTitle,
+	parseTierTitle,
 };

@@ -1,10 +1,10 @@
 // Imports
 const {
-  Client,
-  Message,
-  parseEmoji,
-  AttachmentBuilder,
-  EmbedBuilder,
+	Client,
+	Message,
+	parseEmoji,
+	AttachmentBuilder,
+	EmbedBuilder,
 } = require("discord.js");
 const gTTS = require("node-gtts")("en-us");
 const assert = require("assert");
@@ -17,328 +17,345 @@ const words = require("../datasets/dictionary.dataset.json").data;
 
 // Middlewares
 class ChallengesMap {
-  static map = {};
+	static map = {};
 
-  /**
-   * @param {string} guildId
-   * @param {string} channelId 
-   * @returns {boolean}
-   */
-  static registerGuild(guildId, channelId) {
-    if (guildId in this.map)
-      return false;
+	/**
+	 * @param {string} guildId
+	 * @param {string} channelId
+	 * @returns {boolean}
+	 */
+	static registerGuild(guildId, channelId) {
+		if (guildId in this.map) return false;
 
-    this.map[guildId] = new Challenge(guildId, channelId);
-    return true;
-  }
+		this.map[guildId] = new Challenge(guildId, channelId);
+		return true;
+	}
 
-  /**
-   * @param {string} guildId 
-   * @returns {Challenge | undefined}
-   */
-  static getGuildChallenge(guildId) {
-    return this.map[guildId];
-  }
+	/**
+	 * @param {string} guildId
+	 * @returns {Challenge | undefined}
+	 */
+	static getGuildChallenge(guildId) {
+		return this.map[guildId];
+	}
 
-  /**
-   * @param {string} guildId
-   */
-  static removeGuildChallenge(guildId) {
-    if (guildId in this.map) {
-      // Stop service (if started)
-      const challenge = this.map[guildId];
-      assert(challenge instanceof Challenge);
-      
-      if (challenge.serviceId !== undefined)
-        clearInterval(challenge.serviceId);
-    }
+	/**
+	 * @param {string} guildId
+	 */
+	static removeGuildChallenge(guildId) {
+		if (guildId in this.map) {
+			// Stop service (if started)
+			const challenge = this.map[guildId];
+			assert(challenge instanceof Challenge);
 
-    delete this.map[guildId];
-  }
+			if (challenge.serviceId !== undefined) clearInterval(challenge.serviceId);
+		}
+
+		delete this.map[guildId];
+	}
 }
 
 class Challenge {
-  guildId = "";
-  channelId = "";
-  serviceId = undefined;
+	guildId = "";
+	channelId = "";
+	serviceId = undefined;
 
-  // Challenge parameters
-  startedBy = undefined;
-  startedByAvatarUrl = undefined;
-  durationPerRound = undefined;
-  roundsLeft = undefined;
-  multipleGuesses = undefined;
-  roundStarted = false;
-  shouldStop = false;
+	// Challenge parameters
+	startedBy = undefined;
+	startedByAvatarUrl = undefined;
+	durationPerRound = undefined;
+	roundsLeft = undefined;
+	multipleGuesses = undefined;
+	roundStarted = false;
+	shouldStop = false;
 
-  // Challenge stats
-  words = [];
-  scores = {};
-  correctGuesses = [];
-  usersResponded = {};
+	// Challenge stats
+	words = [];
+	scores = {};
+	correctGuesses = [];
+	usersResponded = {};
 
-  /**
-   * @param {string} guildId 
-   * @param {string} channelId
-   */
-  constructor (guildId, channelId) {
-    this.guildId = guildId;
-    this.channelId = channelId;
-  }
+	/**
+	 * @param {string} guildId
+	 * @param {string} channelId
+	 */
+	constructor(guildId, channelId) {
+		this.guildId = guildId;
+		this.channelId = channelId;
+	}
 
-  /**
-   * @returns {Map<string, number>} Scores
-   */
-  getScores() {
-    return this.scores;
-  }
+	/**
+	 * @returns {Map<string, number>} Scores
+	 */
+	getScores() {
+		return this.scores;
+	}
 
-  /**
-   * @returns {string[]} Words
-   */
-  getWords() {
-    return this.words;
-  }
+	/**
+	 * @returns {string[]} Words
+	 */
+	getWords() {
+		return this.words;
+	}
 
-  stopChallenge() {
-    this.shouldStop = true;
-  }
+	stopChallenge() {
+		this.shouldStop = true;
+	}
 
-  /**
-   * @param {Client} client 
-   * @param {string} startedBy 
-   * @param {string} startedByAvatarUrl 
-   * @param {number} durationPerRound Milliseconds
-   * @param {number} roundsLeft
-   * @param {boolean} multipleGuesses 
-   * @returns {boolean}
-   */
-  beginChallenge(
-    client,
-    startedBy,
-    startedByAvatarUrl,
-    durationPerRound,
-    roundsLeft,
-    multipleGuesses,
-  ) {
-    if (this.serviceId !== undefined)
-      return false;
+	/**
+	 * @param {Client} client
+	 * @param {string} startedBy
+	 * @param {string} startedByAvatarUrl
+	 * @param {number} durationPerRound Milliseconds
+	 * @param {number} roundsLeft
+	 * @param {boolean} multipleGuesses
+	 * @returns {boolean}
+	 */
+	beginChallenge(
+		client,
+		startedBy,
+		startedByAvatarUrl,
+		durationPerRound,
+		roundsLeft,
+		multipleGuesses
+	) {
+		if (this.serviceId !== undefined) return false;
 
-    this.startedBy = startedBy;
-    this.startedByAvatarUrl = startedByAvatarUrl;
-    this.durationPerRound = durationPerRound;
-    this.roundsLeft = roundsLeft;
-    this.multipleGuesses = multipleGuesses;
+		this.startedBy = startedBy;
+		this.startedByAvatarUrl = startedByAvatarUrl;
+		this.durationPerRound = durationPerRound;
+		this.roundsLeft = roundsLeft;
+		this.multipleGuesses = multipleGuesses;
 
-    this.challengeMainLoop(client);
-    return true;
-  }
+		this.challengeMainLoop(client);
+		return true;
+	}
 
-  /**
-   * @param {Client} client 
-   */
-  async challengeMainLoop(client) {
-    if (this.shouldStop)
-      return;
+	/**
+	 * @param {Client} client
+	 */
+	async challengeMainLoop(client) {
+		if (this.shouldStop) return;
 
-    // Check if the current round is not
-    // first round
-    if (this.words.length > 0) {
-      // Subsequent passes
+		// Check if the current round is not
+		// first round
+		if (this.words.length > 0) {
+			// Subsequent passes
 
-      // Compute scores
-      const authors = {};
-      for (const message of this.correctGuesses)
-        if (!(message.author.id in authors)) {
-          authors[message.author.id] = true;
-          try {
-            message.react("1164200557356007434");
-          } catch (error) {
-            console.error(error);
-          }
+			// Compute scores
+			const authors = {};
+			for (const message of this.correctGuesses)
+				if (!(message.author.id in authors)) {
+					authors[message.author.id] = true;
+					try {
+						message.react("1164200557356007434");
+					} catch (error) {
+						console.error(error);
+					}
 
-          if (!(message.author.id in this.scores))
-            this.scores[message.author.id] = 100;
-          else
-            this.scores[message.author.id] += 100;
-        }
+					if (!(message.author.id in this.scores))
+						this.scores[message.author.id] = 100;
+					else this.scores[message.author.id] += 100;
+				}
 
-      // Send post-round message
-      const word = this.words[this.words.length - 1];
-      const description = Object.keys(this.scores)
-        .sort((left, right) => this.scores[right] - this.scores[left])
-        .map((userId, index) => `**#${index + 1}** <@${userId}> ▶️ +${this.scores[userId]}`)
-        .join("\n");
-      const revealedExample = processExample(word.example?.toLowerCase()?.trim() ?? "N/a", word.word, false);
-      const channel = await client.channels.fetch(this.channelId);
-      channel.send({
-        embeds: [
-          new EmbedBuilder()
-            .setThumbnail(META.bannerImageUrl)
-            .setColor(META.color)
-            .setTitle(`The word was "${word.word}".`)
-            .setAuthor({
-              name: `Started by ${this.startedBy}`,
-              iconURL: this.startedByAvatarUrl,
-            })
-            .setDescription(
-              description.length >= 1 ? description : "No one has scored any points yet!"
-            )
-            .setFields([
-              { name: "Part of Speech", value: `_${word.partOfSpeech}_`, inline: true },
-              { name: "Phonetic", value: word.phonetic, inline: true },
-              { name: "Meaning", value: word.meaning },
-              { name: "Example", value: revealedExample  }
-            ]),
-        ],
-      });
-      await sleep(10000);
-      
-      // Reset parameters
-      this.correctGuesses = [];
-      this.usersResponded = {};
-    } else {
-      // First pass
-      await sleep(10000);
-    }
+			// Send post-round message
+			const word = this.words[this.words.length - 1];
+			const description = Object.keys(this.scores)
+				.sort((left, right) => this.scores[right] - this.scores[left])
+				.map(
+					(userId, index) =>
+						`**#${index + 1}** <@${userId}> ▶️ +${this.scores[userId]}`
+				)
+				.join("\n");
+			const revealedExample = processExample(
+				word.example?.toLowerCase()?.trim() ?? "N/a",
+				word.word,
+				false
+			);
+			const channel = await client.channels.fetch(this.channelId);
+			channel.send({
+				embeds: [
+					new EmbedBuilder()
+						.setThumbnail(META.bannerImageUrl)
+						.setColor(META.color)
+						.setTitle(`The word was "${word.word}".`)
+						.setAuthor({
+							name: `Started by ${this.startedBy}`,
+							iconURL: this.startedByAvatarUrl,
+						})
+						.setDescription(
+							description.length >= 1
+								? description
+								: "No one has scored any points yet!"
+						)
+						.setFields([
+							{
+								name: "Part of Speech",
+								value: `_${word.partOfSpeech}_`,
+								inline: true,
+							},
+							{ name: "Phonetic", value: word.phonetic, inline: true },
+							{ name: "Meaning", value: word.meaning },
+							{ name: "Example", value: revealedExample },
+						]),
+				],
+			});
+			await sleep(10000);
 
-    // Check if the game has concluded
-    if (this.roundsLeft-- === 0) {
-      // Update scores in database
-      await Promise.all(
-        Object.keys(this.scores)
-          .map(async userId => {
-            return await UserService.incrementScore(
-              await client.users.fetch(userId),
-              this.scores[userId],
-            );
-          }),
-      );
+			// Reset parameters
+			this.correctGuesses = [];
+			this.usersResponded = {};
+		} else {
+			// First pass
+			await sleep(10000);
+		}
 
-      // Fetch scores of winners
-      const scores = await UserService.fetchScores(...Object.keys(this.scores));
+		// Check if the game has concluded
+		if (this.roundsLeft-- === 0) {
+			// Update scores in database
+			await Promise.all(
+				Object.keys(this.scores).map(async (userId) => {
+					return await UserService.incrementScore(
+						await client.users.fetch(userId),
+						this.scores[userId]
+					);
+				})
+			);
 
-      // Post results
-      const channel = await client.channels.fetch(this.channelId);
-      await channel.send({
-        embeds: [
-          new EmbedBuilder()
-            .setThumbnail(META.bannerImageUrl)
-            .setColor(META.color)
-            .setTitle(`${META.name} Challenge Ended`)
-            .setAuthor({
-              name: `Started by ${this.startedBy}`,
-              iconURL: this.startedByAvatarUrl,
-            })
-            .setFields(
-              await Promise.all(
-                Object.keys(this.scores).slice(0, Math.min(25, Object.keys(this.scores).length))
-                  .sort((left, right) => this.scores[right] - this.scores[left])
-                  .map(async userId => ({
-                    name: (await client.users.fetch(userId)).username,
-                    value: `**${scores[userId]?.score}, ${scores[userId]?.title}** (+${this.scores[userId]})`,
-                  })),
-              ),
-            ),
-        ],
-      });
+			// Fetch scores of winners
+			const scores = await UserService.fetchScores(...Object.keys(this.scores));
 
-      // Unregister challenge from guild
-      ChallengesMap.removeGuildChallenge(this.guildId);
+			// Post results
+			const channel = await client.channels.fetch(this.channelId);
+			await channel.send({
+				embeds: [
+					new EmbedBuilder()
+						.setThumbnail(META.bannerImageUrl)
+						.setColor(META.color)
+						.setTitle(`${META.name} Challenge Ended`)
+						.setAuthor({
+							name: `Started by ${this.startedBy}`,
+							iconURL: this.startedByAvatarUrl,
+						})
+						.setFields(
+							await Promise.all(
+								Object.keys(this.scores)
+									.slice(0, Math.min(25, Object.keys(this.scores).length))
+									.sort((left, right) => this.scores[right] - this.scores[left])
+									.map(async (userId) => ({
+										name: (await client.users.fetch(userId)).username,
+										value: `**${scores[userId]?.score}, ${scores[userId]?.title}** (+${this.scores[userId]})`,
+									}))
+							)
+						),
+				],
+			});
 
-      return;
-    }
+			// Unregister challenge from guild
+			ChallengesMap.removeGuildChallenge(this.guildId);
 
-    if (this.shouldStop) return;
+			return;
+		}
 
-    // Pick a word
-    const word = words[Math.floor(Math.random() * words.length)];
-    this.words.push(word);
+		if (this.shouldStop) return;
 
-    // Push challenge message
-    const channel = await client.channels.fetch(this.channelId);
-    const processedExample = processExample(word.example?.toLowerCase()?.trim(), word.word);
-    const message = await channel.send({
-      embeds: [
-        new EmbedBuilder()
-          .setThumbnail(META.bannerImageUrl)
-          .setColor(META.color)
-          .setTitle(`Word #${this.words.length}`)
-          .setFields(
-            { name: "Part of Speech", value: `_${word.partOfSpeech}_` },
-            { name: "Example", value: processedExample },
-            { name: "Revealing in", value: `**${Math.floor(this.durationPerRound / 1000)} seconds**` },
-          ),
-      ],
-      files: [
-        new AttachmentBuilder()
-          .setName("Pronunciation.mp3")
-          .setFile(await getBufferFromStream(gTTS.stream(word.word))),
-      ],
-    });
-    const start = Date.now();
-    this.roundStarted = true;
+		// Pick a word
+		const word = words[Math.floor(Math.random() * words.length)];
+		this.words.push(word);
 
-    // Update message to reflect time remaining
-    const messageUpdateInterval = setInterval(() => {
-      if (this.shouldStop) {
-        clearInterval(messageUpdateInterval);
-        return;
-      }
-      if (!message.editable) return;
+		// Push challenge message
+		const channel = await client.channels.fetch(this.channelId);
+		const processedExample = processExample(
+			word.example?.toLowerCase()?.trim(),
+			word.word
+		);
+		const message = await channel.send({
+			embeds: [
+				new EmbedBuilder()
+					.setThumbnail(META.bannerImageUrl)
+					.setColor(META.color)
+					.setTitle(`Word #${this.words.length}`)
+					.setFields(
+						{ name: "Part of Speech", value: `_${word.partOfSpeech}_` },
+						{ name: "Example", value: processedExample },
+						{
+							name: "Revealing in",
+							value: `**${Math.floor(this.durationPerRound / 1000)} seconds**`,
+						}
+					),
+			],
+			files: [
+				new AttachmentBuilder()
+					.setName("Pronunciation.mp3")
+					.setFile(await getBufferFromStream(gTTS.stream(word.word))),
+			],
+		});
+		const start = Date.now();
+		this.roundStarted = true;
 
-      const remaining = Math.floor((this.durationPerRound - (Date.now() - start)) / 1000);
-      try {
-        message.edit({
-          embeds: [
-            new EmbedBuilder()
-              .setThumbnail(META.bannerImageUrl)
-              .setColor(META.color)
-              .setTitle(`Word #${this.words.length}`)
-              .setFields(
-                { name: "Part of Speech", value: `_${word.partOfSpeech}_` },
-                { name: "Example", value: processedExample },
-                { name: "Revealing in", value: `**${remaining} seconds**` },
-              ),
-          ],
-        });
-      } catch (error) {
-        console.error(error);
-      }
-    }, 1000);
+		// Update message to reflect time remaining
+		const messageUpdateInterval = setInterval(() => {
+			if (this.shouldStop) {
+				clearInterval(messageUpdateInterval);
+				return;
+			}
+			if (!message.editable) return;
 
-    // Round duration
-    await sleep(this.durationPerRound);
-    clearInterval(messageUpdateInterval);
+			const remaining = Math.floor(
+				(this.durationPerRound - (Date.now() - start)) / 1000
+			);
+			try {
+				message.edit({
+					embeds: [
+						new EmbedBuilder()
+							.setThumbnail(META.bannerImageUrl)
+							.setColor(META.color)
+							.setTitle(`Word #${this.words.length}`)
+							.setFields(
+								{ name: "Part of Speech", value: `_${word.partOfSpeech}_` },
+								{ name: "Example", value: processedExample },
+								{ name: "Revealing in", value: `**${remaining} seconds**` }
+							),
+					],
+				});
+			} catch (error) {
+				console.error(error);
+			}
+		}, 1000);
 
-    // Recursive
-    if (!this.shouldStop) {
-      this.challengeMainLoop(client);
-      this.roundStarted = false;
-    }
-  }
+		// Round duration
+		await sleep(this.durationPerRound);
+		clearInterval(messageUpdateInterval);
 
-  /**
-   * @param {Client} client 
-   * @param {Message} message 
-   */
-  processGuess(client, message) {
-    if (this.shouldStop || !this.roundStarted) return;
+		// Recursive
+		if (!this.shouldStop) {
+			this.challengeMainLoop(client);
+			this.roundStarted = false;
+		}
+	}
 
-    const content = message.content.trim().toLowerCase();
-    if (this.multipleGuesses) {
-      if (content === this.words[this.words.length - 1].word)
-        this.correctGuesses.push(message);
-    } else
-      if (!(message.author.id in this.usersResponded)) {
-        this.usersResponded[message.author.id] = true;
-        if (content === this.words[this.words.length - 1].word)
-          this.correctGuesses.push(message);
-      }
-  }
+	/**
+	 * @param {Client} client
+	 * @param {Message} message
+	 */
+	processGuess(client, message) {
+		if (this.shouldStop || !this.roundStarted) return;
+
+		const content = message.content.trim().toLowerCase();
+		if (this.multipleGuesses) {
+			if (content === this.words[this.words.length - 1].word)
+				this.correctGuesses.push(message);
+		} else if (!(message.author.id in this.usersResponded)) {
+			this.usersResponded[message.author.id] = true;
+			if (content === this.words[this.words.length - 1].word)
+				this.correctGuesses.push(message);
+
+			message.react(":lock:");
+		}
+	}
 }
 
 module.exports = {
-  ChallengesMap,
-  Challenge,
+	ChallengesMap,
+	Challenge,
 };
