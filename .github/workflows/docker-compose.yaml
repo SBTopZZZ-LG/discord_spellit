@@ -85,7 +85,26 @@ jobs:
           role-session-name: GitHubActions
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Check if ECS Cluster and Service exist
+        id: check-ecs
+        run: |
+          # Check if the cluster exists
+          if aws ecs describe-clusters --clusters $AWS_ECS_CLUSTER --query "clusters[].clusterName" --output text | grep -q "$AWS_ECS_CLUSTER"; then
+            # Cluster exists, now check if the service exists
+            if aws ecs list-services --cluster $AWS_ECS_CLUSTER --query "serviceArns[*]" --output text | grep -q "$AWS_ECS_SERVICE"; then
+              echo "ECS cluster and service exist. Proceeding with deployment."
+              echo "can_deploy=true" >> $GITHUB_OUTPUT
+            else
+              echo "ECS service does not exist. Skipping deployment."
+              echo "can_deploy=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "ECS cluster does not exist. Skipping deployment."
+            echo "can_deploy=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Force New ECS Deployment
+        if: steps.check-ecs.outputs.can_deploy == 'true'
         run: |
           aws ecs update-service --cluster $AWS_ECS_CLUSTER \
             --service $AWS_ECS_SERVICE --force-new-deployment
