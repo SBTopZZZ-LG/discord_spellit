@@ -67,7 +67,10 @@ class Challenge {
 	roundsLeft = undefined;
 	multipleGuesses = undefined;
 	roundStarted = false;
+	roundStartTime = undefined;
 	shouldStop = false;
+	MAX_SCORE = 100;
+	MIN_SCORE = 30;
 
 	// Challenge stats
 	words = [];
@@ -144,7 +147,10 @@ class Challenge {
 
 			// Compute scores
 			const authors = {};
-			for (const message of this.correctGuesses)
+			const roundEndTime = Date.now();
+			for (const correctGuess of this.correctGuesses) {
+				const { message = "", timestamp = 0 } = correctGuess;
+
 				if (!(message.author.id in authors)) {
 					authors[message.author.id] = true;
 					try {
@@ -153,10 +159,16 @@ class Challenge {
 						console.error(error);
 					}
 
+					const scoreDelta = this.calculateScoreDelta(
+						this.roundStartTime,
+						roundEndTime,
+						timestamp
+					);
 					if (!(message.author.id in this.scores))
-						this.scores[message.author.id] = 100;
-					else this.scores[message.author.id] += 100;
+						this.scores[message.author.id] = scoreDelta;
+					else this.scores[message.author.id] += scoreDelta;
 				}
+			}
 
 			// Send post-round message
 			const word = this.words[this.words.length - 1];
@@ -291,6 +303,7 @@ class Challenge {
 			],
 		});
 		const start = Date.now();
+		this.roundStartTime = start;
 		this.roundStarted = true;
 
 		// Update message to reflect time remaining
@@ -342,16 +355,41 @@ class Challenge {
 		if (this.shouldStop || !this.roundStarted) return;
 
 		const content = message.content.trim().toLowerCase();
+		const timestamp = message.createdTimestamp || Date.now();
 		if (this.multipleGuesses) {
-			if (content === this.words[this.words.length - 1].word)
-				this.correctGuesses.push(message);
+			if (content === this.words[this.words.length - 1].word) {
+				const correctGuess = {
+					message,
+					timestamp,
+				};
+				this.correctGuesses.push(correctGuess);
+			}
 		} else if (!(message.author.id in this.usersResponded)) {
 			this.usersResponded[message.author.id] = true;
-			if (content === this.words[this.words.length - 1].word)
-				this.correctGuesses.push(message);
+			if (content === this.words[this.words.length - 1].word) {
+				const correctGuess = {
+					message,
+					timestamp,
+				};
+				this.correctGuesses.push(correctGuess);
+			}
 
 			message.react("🔒");
 		}
+	}
+
+	/**
+	 * @param {number} roundStartTime
+	 * @param {number} roundEndTime
+	 * @param {number} timestamp
+	 */
+	calculateScoreDelta(roundStartTime, roundEndTime, timestamp) {
+		const duration = roundEndTime - roundStartTime;
+		const elapsedTimeUntilAnswer = timestamp - roundStartTime;
+		const bias = elapsedTimeUntilAnswer / duration;
+		const scoreDelta = Math.max(this.MIN_SCORE, bias * this.MAX_SCORE);
+
+		return scoreDelta;
 	}
 }
 
