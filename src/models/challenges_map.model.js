@@ -387,7 +387,7 @@ class Challenge {
 	calculateScoreDelta(roundStartTime, roundEndTime, timestamp) {
 		const duration = roundEndTime - roundStartTime;
 		const elapsedTimeUntilAnswer = timestamp - roundStartTime;
-		const bias = elapsedTimeUntilAnswer / duration;
+		const bias = 1 - elapsedTimeUntilAnswer / duration;
 		const scoreDelta = Math.ceil(
 			Math.max(this.MIN_SCORE, bias * this.MAX_SCORE)
 		);
