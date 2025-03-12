@@ -350,7 +350,7 @@ class Challenge {
 			if (content === this.words[this.words.length - 1].word)
 				this.correctGuesses.push(message);
 
-			message.react(":lock:");
+			message.react("🔒");
 		}
 	}
 }
