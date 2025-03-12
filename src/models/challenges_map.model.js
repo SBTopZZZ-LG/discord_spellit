@@ -71,6 +71,7 @@ class Challenge {
 	shouldStop = false;
 	MAX_SCORE = 100;
 	MIN_SCORE = 30;
+	POST_ROUND_MAX_RESULTS = 10;
 
 	// Challenge stats
 	words = [];
@@ -174,6 +175,7 @@ class Challenge {
 			const word = this.words[this.words.length - 1];
 			const description = Object.keys(this.scores)
 				.sort((left, right) => this.scores[right] - this.scores[left])
+				.slice(0, this.POST_ROUND_MAX_RESULTS)
 				.map(
 					(userId, index) =>
 						`**#${index + 1}** <@${userId}> ▶️ +${this.scores[userId]}`
@@ -190,7 +192,7 @@ class Challenge {
 					new EmbedBuilder()
 						.setThumbnail(META.bannerImageUrl)
 						.setColor(META.color)
-						.setTitle(`The word was "${word.word}".`)
+						.setTitle(`The #${this.words.length} word was "${word.word}".`)
 						.setAuthor({
 							name: `Started by ${this.startedBy}`,
 							iconURL: this.startedByAvatarUrl,
