@@ -14,6 +14,7 @@ env:
   AWS_ECS_SERVICE: ${{ vars.AWS_ECS_SERVICE }}
   DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
   DISCORD_CLIENT_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
+  MONGODB_URI: ${{ secrets.MONGODB_URI }}
 
 permissions:
   id-token: write
@@ -69,7 +70,7 @@ jobs:
         run: |
           aws secretsmanager update-secret --region $AWS_REGION \
             --secret-id $AWS_SECRET_NAME \
-            --secret-string '{"DISCORD_BOT_TOKEN": "'${DISCORD_BOT_TOKEN}'", "DISCORD_CLIENT_SECRET": "'${DISCORD_CLIENT_SECRET}'"}'
+            --secret-string '{"DISCORD_BOT_TOKEN": "'${DISCORD_BOT_TOKEN}'", "DISCORD_CLIENT_SECRET": "'${DISCORD_CLIENT_SECRET}'", "MONGODB_URI": "'${MONGODB_URI}'"}'
 
   force-ecs-deployment:
     name: Force ECS Deployment
