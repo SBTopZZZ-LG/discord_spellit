@@ -1,0 +1,6 @@
+src/**
+Dockerfile
+docker-compose.yml
+.github/**
+package.json
+package-lock.json
