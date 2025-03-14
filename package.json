@@ -32,10 +32,8 @@
 		"nodemon": "^3.0.1"
 	},
 	"dependencies": {
-		"cors": "^2.8.5",
 		"discord.js": "^14.13.0",
 		"dotenv": "^16.3.1",
-		"express": "^4.18.2",
 		"mongoose": "^8.12.1",
 		"node-gtts": "github:SBTopZZZ-LG/node-gtts-no-log"
 	}
