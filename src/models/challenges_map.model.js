@@ -2,7 +2,6 @@
 const {
 	Client,
 	Message,
-	parseEmoji,
 	AttachmentBuilder,
 	EmbedBuilder,
 } = require("discord.js");
@@ -55,6 +54,39 @@ class ChallengesMap {
 	}
 }
 
+class ChallengeParams {
+	durationPerRound = undefined;
+	roundsLeft = undefined;
+	multipleGuesses = undefined;
+
+	/**
+	 * @param {number} durationPerRound In milliseconds
+	 * @returns {ChallengeParams}
+	 */
+	setDurationPerRound(durationPerRound) {
+		this.durationPerRound = durationPerRound;
+		return this;
+	}
+
+	/**
+	 * @param {number} roundsLeft
+	 * @returns {ChallengeParams}
+	 */
+	setRoundsLeft(roundsLeft) {
+		this.roundsLeft = roundsLeft;
+		return this;
+	}
+
+	/**
+	 * @param {boolean} multipleGuesses
+	 * @returns {ChallengeParams}
+	 */
+	setMultipleGuesses(multipleGuesses) {
+		this.multipleGuesses = multipleGuesses;
+		return this;
+	}
+}
+
 class Challenge {
 	guildId = "";
 	channelId = "";
@@ -63,9 +95,8 @@ class Challenge {
 	// Challenge parameters
 	startedBy = undefined;
 	startedByAvatarUrl = undefined;
-	durationPerRound = undefined;
+	params = undefined;
 	roundsLeft = undefined;
-	multipleGuesses = undefined;
 	roundStarted = false;
 	roundStartTime = undefined;
 	shouldStop = false;
@@ -110,26 +141,17 @@ class Challenge {
 	 * @param {Client} client
 	 * @param {string} startedBy
 	 * @param {string} startedByAvatarUrl
-	 * @param {number} durationPerRound Milliseconds
-	 * @param {number} roundsLeft
-	 * @param {boolean} multipleGuesses
+	 * @param {ChallengeParams} params
 	 * @returns {boolean}
 	 */
-	beginChallenge(
-		client,
-		startedBy,
-		startedByAvatarUrl,
-		durationPerRound,
-		roundsLeft,
-		multipleGuesses
-	) {
+	beginChallenge(client, startedBy, startedByAvatarUrl, params) {
 		if (this.serviceId !== undefined) return false;
 
 		this.startedBy = startedBy;
 		this.startedByAvatarUrl = startedByAvatarUrl;
-		this.durationPerRound = durationPerRound;
-		this.roundsLeft = roundsLeft;
-		this.multipleGuesses = multipleGuesses;
+		this.params = params;
+
+		this.roundsLeft = params.roundsLeft;
 
 		this.challengeMainLoop(client);
 		return true;
@@ -294,7 +316,9 @@ class Challenge {
 						{ name: "Example", value: processedExample },
 						{
 							name: "Revealing in",
-							value: `**${Math.floor(this.durationPerRound / 1000)} seconds**`,
+							value: `**${Math.floor(
+								this.params.durationPerRound / 1000
+							)} seconds**`,
 						}
 					),
 			],
@@ -317,7 +341,7 @@ class Challenge {
 			if (!message.editable) return;
 
 			const remaining = Math.floor(
-				(this.durationPerRound - (Date.now() - start)) / 1000
+				(this.params.durationPerRound - (Date.now() - start)) / 1000
 			);
 			try {
 				message.edit({
@@ -339,7 +363,7 @@ class Challenge {
 		}, 1000);
 
 		// Round duration
-		await sleep(this.durationPerRound);
+		await sleep(this.params.durationPerRound);
 		clearInterval(messageUpdateInterval);
 
 		// Recursive
@@ -358,7 +382,7 @@ class Challenge {
 
 		const content = message.content.trim().toLowerCase();
 		const timestamp = message.createdTimestamp || Date.now();
-		if (this.multipleGuesses) {
+		if (this.params.multipleGuesses) {
 			if (content === this.words[this.words.length - 1].word) {
 				const correctGuess = {
 					message,
@@ -400,5 +424,6 @@ class Challenge {
 
 module.exports = {
 	ChallengesMap,
+	ChallengeParams,
 	Challenge,
 };

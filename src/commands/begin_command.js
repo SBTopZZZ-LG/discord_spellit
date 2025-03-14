@@ -6,7 +6,10 @@ const {
 	EmbedBuilder,
 	SlashCommandBooleanOption,
 } = require("discord.js");
-const { ChallengesMap } = require("../models/challenges_map.model");
+const {
+	ChallengesMap,
+	ChallengeParams,
+} = require("../models/challenges_map.model");
 const {
 	duration1,
 	rounds1,
@@ -91,13 +94,16 @@ async function handler(interaction) {
 		});
 
 		try {
+			const params = new ChallengeParams()
+				.setDurationPerRound(duration)
+				.setRoundsLeft(rounds)
+				.setMultipleGuesses(multipleGuesses);
+
 			ChallengesMap.getGuildChallenge(guildId).beginChallenge(
 				interaction.client,
 				interaction.user.username,
 				interaction.user.avatarURL({ size: 32 }),
-				duration,
-				rounds,
-				multipleGuesses
+				params
 			);
 		} catch (error) {
 			console.error(error);
