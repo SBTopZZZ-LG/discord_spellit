@@ -36,7 +36,7 @@
 		"discord.js": "^14.13.0",
 		"dotenv": "^16.3.1",
 		"express": "^4.18.2",
-		"mongoose": "^7.5.4",
+		"mongoose": "^8.12.1",
 		"node-gtts": "github:SBTopZZZ-LG/node-gtts-no-log"
 	}
 }
