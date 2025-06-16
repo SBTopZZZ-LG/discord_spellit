@@ -32,7 +32,7 @@
 		"nodemon": "^3.0.1"
 	},
 	"dependencies": {
-		"discord.js": "^14.13.0",
+		"discord.js": "^14.20.0",
 		"dotenv": "^16.3.1",
 		"mongoose": "^8.12.1",
 		"node-gtts": "github:SBTopZZZ-LG/node-gtts-no-log"
