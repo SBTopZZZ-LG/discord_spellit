@@ -34,7 +34,7 @@
 	"dependencies": {
 		"discord.js": "^14.13.0",
 		"dotenv": "^16.3.1",
-		"mongoose": "^8.12.1",
+		"mongoose": "^9.0.2",
 		"node-gtts": "github:SBTopZZZ-LG/node-gtts-no-log"
 	}
 }
